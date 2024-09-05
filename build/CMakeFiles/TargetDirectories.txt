@@ -1,0 +1,3 @@
+/home/donitacosmica/Tarea/Pong/build/CMakeFiles/Pong.dir
+/home/donitacosmica/Tarea/Pong/build/CMakeFiles/edit_cache.dir
+/home/donitacosmica/Tarea/Pong/build/CMakeFiles/rebuild_cache.dir
