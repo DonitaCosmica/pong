@@ -55,6 +55,13 @@ namespace pong {
 
   void UIManager::render() const
   {
+    if(terminalManager->hasTerminalResized())
+    {
+      system("clear");
+      TerminalManager::TerminalSize terminalSize = terminalManager->getTerminalSize();
+      terminalManager->drawBorder(terminalSize.rows, terminalSize.cols);
+    }
+
     TerminalManager::TerminalSize terminalSize = terminalManager->getTerminalSize();
     std::cout << "\033[" << 1 << ";" << 1 << "H";
 

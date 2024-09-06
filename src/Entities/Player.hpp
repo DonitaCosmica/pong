@@ -15,6 +15,8 @@ namespace pong {
     Player &operator=(const Player &) = default;
     ~Player() = default;
 
+    Player(const std::string&, Side*, Racquet*);
+
   private:
     std::string name;
     Side *side;

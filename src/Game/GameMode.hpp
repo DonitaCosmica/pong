@@ -1,6 +1,8 @@
 #ifndef GAMEMODE_HPP
 #define GAMEMODE_HPP
 
+#include "../Managers/TerminalManager.hpp"
+
 namespace pong {
   class GameMode {
   public:
@@ -16,9 +18,9 @@ namespace pong {
       TWO_ONE
     };
 
-    virtual void initializeGame() = 0;
+    virtual void initializeGame(TerminalManager *terminalManager) = 0;
 
-  private:
+  protected:
     
   };
 }

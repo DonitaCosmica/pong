@@ -249,6 +249,30 @@ src/Entities/Racquet.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Entities/Racquet.cpp.s
 .PHONY : src/Entities/Racquet.cpp.s
 
+src/Entities/Score.o: src/Entities/Score.cpp.o
+.PHONY : src/Entities/Score.o
+
+# target to build an object file
+src/Entities/Score.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Entities/Score.cpp.o
+.PHONY : src/Entities/Score.cpp.o
+
+src/Entities/Score.i: src/Entities/Score.cpp.i
+.PHONY : src/Entities/Score.i
+
+# target to preprocess a source file
+src/Entities/Score.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Entities/Score.cpp.i
+.PHONY : src/Entities/Score.cpp.i
+
+src/Entities/Score.s: src/Entities/Score.cpp.s
+.PHONY : src/Entities/Score.s
+
+# target to generate assembly for a file
+src/Entities/Score.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Entities/Score.cpp.s
+.PHONY : src/Entities/Score.cpp.s
+
 src/Entities/Side.o: src/Entities/Side.cpp.o
 .PHONY : src/Entities/Side.o
 
@@ -392,6 +416,30 @@ src/Game/GameMode2v1.s: src/Game/GameMode2v1.cpp.s
 src/Game/GameMode2v1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.s
 .PHONY : src/Game/GameMode2v1.cpp.s
+
+src/Game/GameModeBuilder.o: src/Game/GameModeBuilder.cpp.o
+.PHONY : src/Game/GameModeBuilder.o
+
+# target to build an object file
+src/Game/GameModeBuilder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o
+.PHONY : src/Game/GameModeBuilder.cpp.o
+
+src/Game/GameModeBuilder.i: src/Game/GameModeBuilder.cpp.i
+.PHONY : src/Game/GameModeBuilder.i
+
+# target to preprocess a source file
+src/Game/GameModeBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.i
+.PHONY : src/Game/GameModeBuilder.cpp.i
+
+src/Game/GameModeBuilder.s: src/Game/GameModeBuilder.cpp.s
+.PHONY : src/Game/GameModeBuilder.s
+
+# target to generate assembly for a file
+src/Game/GameModeBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.s
+.PHONY : src/Game/GameModeBuilder.cpp.s
 
 src/Game/Menu.o: src/Game/Menu.cpp.o
 .PHONY : src/Game/Menu.o
@@ -729,6 +777,9 @@ help:
 	@echo "... src/Entities/Racquet.o"
 	@echo "... src/Entities/Racquet.i"
 	@echo "... src/Entities/Racquet.s"
+	@echo "... src/Entities/Score.o"
+	@echo "... src/Entities/Score.i"
+	@echo "... src/Entities/Score.s"
 	@echo "... src/Entities/Side.o"
 	@echo "... src/Entities/Side.i"
 	@echo "... src/Entities/Side.s"
@@ -747,6 +798,9 @@ help:
 	@echo "... src/Game/GameMode2v1.o"
 	@echo "... src/Game/GameMode2v1.i"
 	@echo "... src/Game/GameMode2v1.s"
+	@echo "... src/Game/GameModeBuilder.o"
+	@echo "... src/Game/GameModeBuilder.i"
+	@echo "... src/Game/GameModeBuilder.s"
 	@echo "... src/Game/Menu.o"
 	@echo "... src/Game/Menu.i"
 	@echo "... src/Game/Menu.s"

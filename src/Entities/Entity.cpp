@@ -1,12 +1,10 @@
 #include "Entity.hpp"
 
 namespace pong {
-  Entity::Entity(Point position, float width, float height) :
-    position(position), width(width), height(height) {}
+  Entity::Entity(const std::vector<Point> &points, int width, int height) :
+    points(points), width(width), height(height) {}
 
-  Point& Entity::getPosition() { return position; }
+  int Entity::getWidth() const { return width; }
 
-  float Entity::getWidth() const { return width; }
-
-  float Entity::getHeight() const { return height; }
+  int Entity::getHeight() const { return height; }
 }

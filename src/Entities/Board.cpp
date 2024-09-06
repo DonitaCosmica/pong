@@ -1,32 +1,16 @@
 #include "Board.hpp"
 
 namespace pong {
-  Board::Board(int width, int height) : Entity(Point(0, 0), width, height) 
-  {
-    setBoundaryPoints();
-  }
+  Board::Board(int width, int height) : Entity({
+      Point(width / 2, 0), Point(width / 2, height),
+      Point(0, height / 2), Point(width, height / 2)
+    }, width, height) {}
 
-  const Point& Board::getTop() const { return top; }
+  const Point& Board::getTop() const { return points[0]; }
 
-  const Point& Board::getBottom() const { return bottom; }
+  const Point& Board::getBottom() const { return points[1]; }
 
-  const Point& Board::getLeft() const { return left; }
+  const Point& Board::getLeft() const { return points[2]; }
 
-  const Point& Board::getRight() const { return right; }
-
-  void Board::setBoundaryPoints()
-  {
-    top = new Point(position.x + width / 2, position.y);
-    bottom = new Point(position.x + width / 2, position.y + height);
-    left = new Point(position.x, position.y + height / 2);
-    right = new Point(position.x + width, position.y + height / 2);
-  }
-
-  Board::~Board()
-  {
-    delete top;
-    delete bottom;
-    delete left;
-    delete right;
-  }
+  const Point& Board::getRight() const { return points[3]; }
 }

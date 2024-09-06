@@ -21,7 +21,7 @@ int main (int argc, char *argv[])
     try
     {
       pong::GameMode *selectedMode = menu.showMenu(*uiManager);
-      selectedMode->initializeGame();
+      selectedMode->initializeGame(terminalManager.get());
 
       pong::Game *game = pong::Game::Builder()
         .setUIManager(uiManager.get())

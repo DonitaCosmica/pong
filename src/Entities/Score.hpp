@@ -1,6 +1,8 @@
 #ifndef SCORE_HPP
 #define SCORE_HPP
 
+#include "Player.hpp"
+
 namespace pong {
   class Score {
   public:

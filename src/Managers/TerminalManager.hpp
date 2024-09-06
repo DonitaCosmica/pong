@@ -6,7 +6,7 @@
 namespace pong {
   class TerminalManager {
   public:
-    TerminalManager() = default;
+    TerminalManager();
     TerminalManager(TerminalManager &&) = default;
     TerminalManager(const TerminalManager &) = default;
     TerminalManager &operator=(TerminalManager &&) = default;
@@ -18,14 +18,14 @@ namespace pong {
       int cols;
     };
 
-    TerminalSize getTerminalSize() const;
+    TerminalSize getTerminalSize();
     void drawBorder(int, int) const;
+    bool hasTerminalResized();
 
   private:
-    int borderTop;
-    int borderBottom;
-    int borderLeft;
-    int borderRight;
+    TerminalSize currentSize;
+
+    TerminalSize fetchTerminalSize() const;
   };
 }
 

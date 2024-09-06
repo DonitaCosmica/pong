@@ -1,6 +1,8 @@
 #ifndef ENTITY_HPP
 #define ENTITY_HPP
 
+#include <iostream>
+#include <vector>
 #include "../Physics/Point.hpp"
 
 namespace pong {
@@ -13,14 +15,14 @@ namespace pong {
     Entity &operator=(const Entity &) = default;
     virtual ~Entity() = default;
 
-    Entity(Point, int, int);
+    Entity(const std::vector<Point>&, int, int);
 
-    Point& getPosition();
+    const Point& getPoint(size_t index) const;
     int getWidth() const;
     int getHeight() const;
 
   protected:
-    Point position;
+    std::vector<Point> points;
     int width;
     int height;
   };

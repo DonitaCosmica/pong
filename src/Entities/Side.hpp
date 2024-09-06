@@ -1,18 +1,31 @@
 #ifndef SIDE_HPP
 #define SIDE_HPP
 
+#include "Racquet.hpp"
+
 namespace pong {
-  class Entity {
+  class Side {
   public:
-    Entity() = default;
-    Entity(Entity &&) = default;
-    Entity(const Entity &) = default;
-    Entity &operator=(Entity &&) = default;
-    Entity &operator=(const Entity &) = default;
-    ~Entity() = default;
+    Side() = default;
+    Side(Side &&) = default;
+    Side(const Side &) = default;
+    Side &operator=(Side &&) = default;
+    Side &operator=(const Side &) = default;
+    ~Side() = default;
+ 
+    enum class Position {
+      LEFT,
+      RIGHT
+    };
+
+    Side(Position, Racquet*);
+
+    bool isLeft() const;
+    bool isRight() const;
 
   private:
-    
+    Position position;
+    Racquet *racquet;
   };
 }
 

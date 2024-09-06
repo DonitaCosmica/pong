@@ -4,8 +4,6 @@ CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: \
  /home/donitacosmica/Tarea/Pong/src/Game/GameBuilder.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/Game.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/GameMode.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/InputManager.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/UIManager.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/TerminalManager.hpp \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -22,6 +20,9 @@ CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: \
  /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
  /usr/include/c++/11/type_traits /usr/include/c++/11/initializer_list \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/InputManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/UIManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/TerminalManager.hpp \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h \
  /usr/include/c++/11/bits/char_traits.h \

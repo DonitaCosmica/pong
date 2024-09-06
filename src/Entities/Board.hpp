@@ -2,8 +2,9 @@
 #define BOARD_HPP
 
 #include "Entity.hpp"
-#include "Side.hpp"
+#include "Ball.hpp"
 #include "Score.hpp"
+#include "Side.hpp"
 
 namespace pong {
   class Board : public Entity {
@@ -13,7 +14,7 @@ namespace pong {
     Board(const Board &) = default;
     Board &operator=(Board &&) = default;
     Board &operator=(const Board &) = default;
-    ~Board();
+    ~Board() = default;
 
     Board(int, int);
 
@@ -23,13 +24,10 @@ namespace pong {
     const Point& getRight() const;
 
   private:
+    Ball *ball; 
+    Side *leftSide;
+    Side *rightSide;
     Score *score;
-    Point *top;
-    Point *bottom;
-    Point *left;
-    Point *right;
-
-    void setBoundaryPoints();
   };
 }
 

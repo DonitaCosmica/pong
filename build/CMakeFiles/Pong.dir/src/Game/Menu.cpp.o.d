@@ -3,7 +3,6 @@ CMakeFiles/Pong.dir/src/Game/Menu.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/donitacosmica/Tarea/Pong/src/Game/Menu.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/GameMode.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/UIManager.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/TerminalManager.hpp \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -20,6 +19,8 @@ CMakeFiles/Pong.dir/src/Game/Menu.cpp.o: \
  /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
  /usr/include/c++/11/type_traits /usr/include/c++/11/initializer_list \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/UIManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/TerminalManager.hpp \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
@@ -144,7 +145,8 @@ CMakeFiles/Pong.dir/src/Game/Menu.cpp.o: \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
  /home/donitacosmica/Tarea/Pong/src/Game/GameMode1v1.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/GameMode2v1.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Board.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Entity.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \
@@ -166,4 +168,20 @@ CMakeFiles/Pong.dir/src/Game/Menu.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Vector.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Side.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Racquet.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/GameMode2v1.hpp

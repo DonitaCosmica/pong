@@ -139,10 +139,24 @@ CMakeFiles/Pong.dir/src/Entities/Racquet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pong.dir/src/Entities/Racquet.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/donitacosmica/Tarea/Pong/src/Entities/Racquet.cpp -o CMakeFiles/Pong.dir/src/Entities/Racquet.cpp.s
 
+CMakeFiles/Pong.dir/src/Entities/Score.cpp.o: CMakeFiles/Pong.dir/flags.make
+CMakeFiles/Pong.dir/src/Entities/Score.cpp.o: ../src/Entities/Score.cpp
+CMakeFiles/Pong.dir/src/Entities/Score.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Pong.dir/src/Entities/Score.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Entities/Score.cpp.o -MF CMakeFiles/Pong.dir/src/Entities/Score.cpp.o.d -o CMakeFiles/Pong.dir/src/Entities/Score.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Entities/Score.cpp
+
+CMakeFiles/Pong.dir/src/Entities/Score.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pong.dir/src/Entities/Score.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/donitacosmica/Tarea/Pong/src/Entities/Score.cpp > CMakeFiles/Pong.dir/src/Entities/Score.cpp.i
+
+CMakeFiles/Pong.dir/src/Entities/Score.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pong.dir/src/Entities/Score.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/donitacosmica/Tarea/Pong/src/Entities/Score.cpp -o CMakeFiles/Pong.dir/src/Entities/Score.cpp.s
+
 CMakeFiles/Pong.dir/src/Entities/Side.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Entities/Side.cpp.o: ../src/Entities/Side.cpp
 CMakeFiles/Pong.dir/src/Entities/Side.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Pong.dir/src/Entities/Side.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Pong.dir/src/Entities/Side.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Entities/Side.cpp.o -MF CMakeFiles/Pong.dir/src/Entities/Side.cpp.o.d -o CMakeFiles/Pong.dir/src/Entities/Side.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Entities/Side.cpp
 
 CMakeFiles/Pong.dir/src/Entities/Side.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/Pong.dir/src/Entities/Side.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Game/Game.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Game/Game.cpp.o: ../src/Game/Game.cpp
 CMakeFiles/Pong.dir/src/Game/Game.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Pong.dir/src/Game/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Pong.dir/src/Game/Game.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Game/Game.cpp.o -MF CMakeFiles/Pong.dir/src/Game/Game.cpp.o.d -o CMakeFiles/Pong.dir/src/Game/Game.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Game/Game.cpp
 
 CMakeFiles/Pong.dir/src/Game/Game.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/Pong.dir/src/Game/Game.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: ../src/Game/GameBuilder.cpp
 CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o -MF CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o.d -o CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Game/GameBuilder.cpp
 
 CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o: ../src/Game/GameMode.cpp
 CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o -MF CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o.d -o CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Game/GameMode.cpp
 
 CMakeFiles/Pong.dir/src/Game/GameMode.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/Pong.dir/src/Game/GameMode.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o: ../src/Game/GameMode1v1.cpp
 CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o -MF CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o.d -o CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Game/GameMode1v1.cpp
 
 CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o: ../src/Game/GameMode2v1.cpp
 CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o -MF CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o.d -o CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Game/GameMode2v1.cpp
 
 CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.i: cmake_force
@@ -223,10 +237,24 @@ CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/donitacosmica/Tarea/Pong/src/Game/GameMode2v1.cpp -o CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.s
 
+CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o: CMakeFiles/Pong.dir/flags.make
+CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o: ../src/Game/GameModeBuilder.cpp
+CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o -MF CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o.d -o CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Game/GameModeBuilder.cpp
+
+CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/donitacosmica/Tarea/Pong/src/Game/GameModeBuilder.cpp > CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.i
+
+CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/donitacosmica/Tarea/Pong/src/Game/GameModeBuilder.cpp -o CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.s
+
 CMakeFiles/Pong.dir/src/Game/Menu.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Game/Menu.cpp.o: ../src/Game/Menu.cpp
 CMakeFiles/Pong.dir/src/Game/Menu.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Pong.dir/src/Game/Menu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Pong.dir/src/Game/Menu.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Game/Menu.cpp.o -MF CMakeFiles/Pong.dir/src/Game/Menu.cpp.o.d -o CMakeFiles/Pong.dir/src/Game/Menu.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Game/Menu.cpp
 
 CMakeFiles/Pong.dir/src/Game/Menu.cpp.i: cmake_force
@@ -240,7 +268,7 @@ CMakeFiles/Pong.dir/src/Game/Menu.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o: ../src/Managers/BallManager.cpp
 CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o -MF CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o.d -o CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Managers/BallManager.cpp
 
 CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.i: cmake_force
@@ -254,7 +282,7 @@ CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o: ../src/Managers/InputManager.cpp
 CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o -MF CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o.d -o CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Managers/InputManager.cpp
 
 CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.i: cmake_force
@@ -268,7 +296,7 @@ CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.o: ../src/Managers/ScoreManager.cpp
 CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.o -MF CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.o.d -o CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Managers/ScoreManager.cpp
 
 CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.i: cmake_force
@@ -282,7 +310,7 @@ CMakeFiles/Pong.dir/src/Managers/ScoreManager.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.o: ../src/Managers/TerminalManager.cpp
 CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.o -MF CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.o.d -o CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Managers/TerminalManager.cpp
 
 CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.i: cmake_force
@@ -296,7 +324,7 @@ CMakeFiles/Pong.dir/src/Managers/TerminalManager.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o: ../src/Managers/UIManager.cpp
 CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o -MF CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o.d -o CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Managers/UIManager.cpp
 
 CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.i: cmake_force
@@ -310,7 +338,7 @@ CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o: ../src/Physics/Collision.cpp
 CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o -MF CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o.d -o CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Physics/Collision.cpp
 
 CMakeFiles/Pong.dir/src/Physics/Collision.cpp.i: cmake_force
@@ -324,7 +352,7 @@ CMakeFiles/Pong.dir/src/Physics/Collision.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o: ../src/Physics/Physics.cpp
 CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o -MF CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o.d -o CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Physics/Physics.cpp
 
 CMakeFiles/Pong.dir/src/Physics/Physics.cpp.i: cmake_force
@@ -338,7 +366,7 @@ CMakeFiles/Pong.dir/src/Physics/Physics.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Physics/Point.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Physics/Point.cpp.o: ../src/Physics/Point.cpp
 CMakeFiles/Pong.dir/src/Physics/Point.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Pong.dir/src/Physics/Point.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Pong.dir/src/Physics/Point.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Physics/Point.cpp.o -MF CMakeFiles/Pong.dir/src/Physics/Point.cpp.o.d -o CMakeFiles/Pong.dir/src/Physics/Point.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Physics/Point.cpp
 
 CMakeFiles/Pong.dir/src/Physics/Point.cpp.i: cmake_force
@@ -352,7 +380,7 @@ CMakeFiles/Pong.dir/src/Physics/Point.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o: ../src/Physics/Vector.cpp
 CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o -MF CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o.d -o CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Physics/Vector.cpp
 
 CMakeFiles/Pong.dir/src/Physics/Vector.cpp.i: cmake_force
@@ -366,7 +394,7 @@ CMakeFiles/Pong.dir/src/Physics/Vector.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o: ../src/Utils/Constants.cpp
 CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o -MF CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o.d -o CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Utils/Constants.cpp
 
 CMakeFiles/Pong.dir/src/Utils/Constants.cpp.i: cmake_force
@@ -380,7 +408,7 @@ CMakeFiles/Pong.dir/src/Utils/Constants.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o: ../src/Utils/MathUtils.cpp
 CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o -MF CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o.d -o CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Utils/MathUtils.cpp
 
 CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.i: cmake_force
@@ -394,7 +422,7 @@ CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/main.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Pong.dir/src/main.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Pong.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Pong.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/main.cpp.o -MF CMakeFiles/Pong.dir/src/main.cpp.o.d -o CMakeFiles/Pong.dir/src/main.cpp.o -c /home/donitacosmica/Tarea/Pong/src/main.cpp
 
 CMakeFiles/Pong.dir/src/main.cpp.i: cmake_force
@@ -412,12 +440,14 @@ Pong_OBJECTS = \
 "CMakeFiles/Pong.dir/src/Entities/Entity.cpp.o" \
 "CMakeFiles/Pong.dir/src/Entities/Player.cpp.o" \
 "CMakeFiles/Pong.dir/src/Entities/Racquet.cpp.o" \
+"CMakeFiles/Pong.dir/src/Entities/Score.cpp.o" \
 "CMakeFiles/Pong.dir/src/Entities/Side.cpp.o" \
 "CMakeFiles/Pong.dir/src/Game/Game.cpp.o" \
 "CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o" \
 "CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o" \
 "CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o" \
 "CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o" \
+"CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o" \
 "CMakeFiles/Pong.dir/src/Game/Menu.cpp.o" \
 "CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o" \
 "CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o" \
@@ -440,12 +470,14 @@ Pong: CMakeFiles/Pong.dir/src/Entities/Board.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Entities/Entity.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Entities/Player.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Entities/Racquet.cpp.o
+Pong: CMakeFiles/Pong.dir/src/Entities/Score.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Entities/Side.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Game/Game.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Game/GameMode1v1.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o
+Pong: CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Game/Menu.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.o
@@ -461,7 +493,7 @@ Pong: CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o
 Pong: CMakeFiles/Pong.dir/src/main.cpp.o
 Pong: CMakeFiles/Pong.dir/build.make
 Pong: CMakeFiles/Pong.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable Pong"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable Pong"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Pong.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

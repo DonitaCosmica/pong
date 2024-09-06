@@ -13,7 +13,7 @@ namespace pong {
     Racquet &operator=(const Racquet &) = default;
     ~Racquet() = default;
 
-    void setSpeed(float);
+    Racquet(int, int, float);
 
   private:
     float speed;

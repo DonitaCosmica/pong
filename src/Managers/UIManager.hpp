@@ -25,6 +25,7 @@ namespace pong {
  
     void drawBall() const;
     void drawRacquet() const;
+    void setBoard() const;
 
     void render() const;
     void showMessages(const std::string&) const;
