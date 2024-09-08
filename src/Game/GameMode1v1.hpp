@@ -15,16 +15,19 @@ namespace pong {
     GameMode1v1(const GameMode1v1 &) = default;
     GameMode1v1 &operator=(GameMode1v1 &&) = default;
     GameMode1v1 &operator=(const GameMode1v1 &) = default;
-    ~GameMode1v1();
+    ~GameMode1v1() = default;
 
-    void initializeGame(TerminalManager *terminalManager) override;
+    GameMode1v1(std::unique_ptr<Board>, std::unique_ptr<Score>,
+      std::unique_ptr<Player>, std::unique_ptr<Player>, std::unique_ptr<Ball>);
+
+    void initializeGame() override;
 
   private:
-    Board *board;
-    Score *score;
-    Player *player1;
-    Player *player2;
-    Ball *ball;
+    std::unique_ptr<Board> board;
+    std::unique_ptr<Score> score;
+    std::unique_ptr<Player> player1;
+    std::unique_ptr<Player> player2;
+    std::unique_ptr<Ball> ball;
   };
 }
 

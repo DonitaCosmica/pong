@@ -13,7 +13,7 @@ namespace pong {
     Menu &operator=(const Menu &) = delete;
 
     static Menu& GetInstance();
-    GameMode *showMenu(UIManager&);
+    GameMode::Mode getSelectedMode();
 
   private:
     Menu() = default;

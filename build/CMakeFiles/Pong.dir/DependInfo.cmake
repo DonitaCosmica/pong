@@ -31,6 +31,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/donitacosmica/Tarea/Pong/src/Physics/Physics.cpp" "CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o" "gcc" "CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o.d"
   "/home/donitacosmica/Tarea/Pong/src/Physics/Point.cpp" "CMakeFiles/Pong.dir/src/Physics/Point.cpp.o" "gcc" "CMakeFiles/Pong.dir/src/Physics/Point.cpp.o.d"
   "/home/donitacosmica/Tarea/Pong/src/Physics/Vector.cpp" "CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o" "gcc" "CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o.d"
+  "/home/donitacosmica/Tarea/Pong/src/Utils/Canvas.cpp" "CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o" "gcc" "CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o.d"
   "/home/donitacosmica/Tarea/Pong/src/Utils/Constants.cpp" "CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o" "gcc" "CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o.d"
   "/home/donitacosmica/Tarea/Pong/src/Utils/MathUtils.cpp" "CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o" "gcc" "CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o.d"
   "/home/donitacosmica/Tarea/Pong/src/main.cpp" "CMakeFiles/Pong.dir/src/main.cpp.o" "gcc" "CMakeFiles/Pong.dir/src/main.cpp.o.d"

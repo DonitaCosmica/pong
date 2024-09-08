@@ -391,10 +391,24 @@ CMakeFiles/Pong.dir/src/Physics/Vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pong.dir/src/Physics/Vector.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/donitacosmica/Tarea/Pong/src/Physics/Vector.cpp -o CMakeFiles/Pong.dir/src/Physics/Vector.cpp.s
 
+CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o: CMakeFiles/Pong.dir/flags.make
+CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o: ../src/Utils/Canvas.cpp
+CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o -MF CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o.d -o CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Utils/Canvas.cpp
+
+CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/donitacosmica/Tarea/Pong/src/Utils/Canvas.cpp > CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.i
+
+CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/donitacosmica/Tarea/Pong/src/Utils/Canvas.cpp -o CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.s
+
 CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o: ../src/Utils/Constants.cpp
 CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o -MF CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o.d -o CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Utils/Constants.cpp
 
 CMakeFiles/Pong.dir/src/Utils/Constants.cpp.i: cmake_force
@@ -408,7 +422,7 @@ CMakeFiles/Pong.dir/src/Utils/Constants.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o: ../src/Utils/MathUtils.cpp
 CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o -MF CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o.d -o CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o -c /home/donitacosmica/Tarea/Pong/src/Utils/MathUtils.cpp
 
 CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.i: cmake_force
@@ -422,7 +436,7 @@ CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.s: cmake_force
 CMakeFiles/Pong.dir/src/main.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Pong.dir/src/main.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Pong.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Pong.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/src/main.cpp.o -MF CMakeFiles/Pong.dir/src/main.cpp.o.d -o CMakeFiles/Pong.dir/src/main.cpp.o -c /home/donitacosmica/Tarea/Pong/src/main.cpp
 
 CMakeFiles/Pong.dir/src/main.cpp.i: cmake_force
@@ -458,6 +472,7 @@ Pong_OBJECTS = \
 "CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o" \
 "CMakeFiles/Pong.dir/src/Physics/Point.cpp.o" \
 "CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o" \
+"CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o" \
 "CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o" \
 "CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o" \
 "CMakeFiles/Pong.dir/src/main.cpp.o"
@@ -488,12 +503,13 @@ Pong: CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Physics/Physics.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Physics/Point.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o
+Pong: CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o
 Pong: CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o
 Pong: CMakeFiles/Pong.dir/src/main.cpp.o
 Pong: CMakeFiles/Pong.dir/build.make
 Pong: CMakeFiles/Pong.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable Pong"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable Pong"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Pong.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

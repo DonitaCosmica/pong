@@ -18,8 +18,7 @@ namespace pong {
       int cols;
     };
 
-    TerminalSize getTerminalSize();
-    void drawBorder(int, int) const;
+    TerminalSize getTerminalSize(); 
     bool hasTerminalResized();
 
   private:

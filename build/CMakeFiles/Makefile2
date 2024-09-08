@@ -81,12 +81,12 @@ clean: CMakeFiles/Pong.dir/clean
 CMakeFiles/Pong.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target Pong"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/donitacosmica/Tarea/Pong/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target Pong"
 .PHONY : CMakeFiles/Pong.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Pong.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/donitacosmica/Tarea/Pong/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/donitacosmica/Tarea/Pong/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Pong.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/donitacosmica/Tarea/Pong/build/CMakeFiles 0
 .PHONY : CMakeFiles/Pong.dir/rule

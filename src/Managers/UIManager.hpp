@@ -1,7 +1,9 @@
 #ifndef UIMANAGER_HPP
 #define UIMANAGER_HPP
 
+#include "../Enums/GameState.hpp"
 #include "TerminalManager.hpp"
+#include "../Utils/Canvas.hpp"
 #include <string>
 #include <unordered_map>
 
@@ -18,30 +20,35 @@ namespace pong {
     UIManager(TerminalManager*);
 
     enum class MsgType {
-      SCORE,
+      WINNER,
       NORMAL,
       ERROR
     };
  
     void drawBall() const;
     void drawRacquet() const;
-    void setBoard() const;
+    void setBoard(const Canvas::Area&) const;
+    void drawMenu() const;
+    void drawScore() const;
+    void drawBorder(const std::string&) const;
 
-    void render() const;
-    void showMessages(const std::string&) const;
-    void showMessage(const std::string&, MsgType) const; 
+    void render(GameState) const;
+    void showMessage(const std::string&, MsgType) const;
 
   private:
     TerminalManager *terminalManager;
+    Canvas canvas;
 
     const std::unordered_map<MsgType, float> dictionaryYFactor =
     {
-      { MsgType::SCORE, 0.1f },
+      { MsgType::WINNER, 0.25f },
       { MsgType::NORMAL, 0.5f },
-      { MsgType::ERROR, 0.9f }
+      { MsgType::ERROR, 0.7f }
     };
 
-    std::pair<int, int> calculateCenteredPosition(int, float) const;
+    void showMessages(const std::string&, const Canvas::Area&) const;
+    int countLines(const std::string&) const;
+    std::pair<int, int> centerPos(const std::string&, float, const Canvas::Area&) const;
   };
 }
 

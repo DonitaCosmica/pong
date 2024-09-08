@@ -25,22 +25,5 @@ namespace pong {
   {
     TerminalSize newSize = fetchTerminalSize();
     return newSize.rows != currentSize.rows || newSize.cols != currentSize.cols;
-  }
-
-  void TerminalManager::drawBorder(int rows, int cols) const
-  {
-    std::cout << "\033[2J";
-
-    for (int i = 0; i < cols; i++) std::cout << "#";
-    std::cout << std::endl;
-
-    for (int i = 0; i < rows - 2; i++) {
-      std::cout << "#";
-      for (int j = 0; j < cols - 2; j++) std::cout << " ";
-      std::cout << "#" << std::endl;
-    }
-
-    for (int i = 0; i < cols; i++) std::cout << "#";
-    std::cout << std::endl;
-  }
+  }  
 }

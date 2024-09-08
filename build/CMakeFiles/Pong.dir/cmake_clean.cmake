@@ -45,6 +45,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Pong.dir/src/Physics/Point.cpp.o.d"
   "CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o"
   "CMakeFiles/Pong.dir/src/Physics/Vector.cpp.o.d"
+  "CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o"
+  "CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o.d"
   "CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o"
   "CMakeFiles/Pong.dir/src/Utils/Constants.cpp.o.d"
   "CMakeFiles/Pong.dir/src/Utils/MathUtils.cpp.o"

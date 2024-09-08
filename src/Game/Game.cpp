@@ -13,13 +13,15 @@ namespace pong {
     {
       try
       {
-        uiManager->render();
-        uiManager->showMessage("Hola", pong::UIManager::MsgType::NORMAL);
+        system("clear");
+        uiManager->drawScore();
+        uiManager->drawBorder("game");
         getchar();
       }
       catch (const std::exception &e)
       {
         uiManager->showMessage(e.what(), pong::UIManager::MsgType::ERROR);
+        uiManager->render(state);
       }
     }
   }

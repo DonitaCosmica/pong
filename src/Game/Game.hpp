@@ -2,11 +2,11 @@
 #define GAME_HPP
 
 #include "GameMode.hpp"
+#include "../Enums/GameState.hpp"
 #include "../Managers/InputManager.hpp"
 #include "../Managers/UIManager.hpp"
 
-namespace pong
-{
+namespace pong {
   class Game {
   public:
     Game() = delete;
@@ -15,11 +15,6 @@ namespace pong
     Game &operator=(Game &&) = delete;
     Game &operator=(const Game &) = delete;
     ~Game() = default;
-
-    enum class GameState {
-      PLAYING,
-      GAME_OVER
-    };
 
     class Builder;
     void run();

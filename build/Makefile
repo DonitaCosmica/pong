@@ -681,6 +681,30 @@ src/Physics/Vector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Physics/Vector.cpp.s
 .PHONY : src/Physics/Vector.cpp.s
 
+src/Utils/Canvas.o: src/Utils/Canvas.cpp.o
+.PHONY : src/Utils/Canvas.o
+
+# target to build an object file
+src/Utils/Canvas.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.o
+.PHONY : src/Utils/Canvas.cpp.o
+
+src/Utils/Canvas.i: src/Utils/Canvas.cpp.i
+.PHONY : src/Utils/Canvas.i
+
+# target to preprocess a source file
+src/Utils/Canvas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.i
+.PHONY : src/Utils/Canvas.cpp.i
+
+src/Utils/Canvas.s: src/Utils/Canvas.cpp.s
+.PHONY : src/Utils/Canvas.s
+
+# target to generate assembly for a file
+src/Utils/Canvas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Utils/Canvas.cpp.s
+.PHONY : src/Utils/Canvas.cpp.s
+
 src/Utils/Constants.o: src/Utils/Constants.cpp.o
 .PHONY : src/Utils/Constants.o
 
@@ -831,6 +855,9 @@ help:
 	@echo "... src/Physics/Vector.o"
 	@echo "... src/Physics/Vector.i"
 	@echo "... src/Physics/Vector.s"
+	@echo "... src/Utils/Canvas.o"
+	@echo "... src/Utils/Canvas.i"
+	@echo "... src/Utils/Canvas.s"
 	@echo "... src/Utils/Constants.o"
 	@echo "... src/Utils/Constants.i"
 	@echo "... src/Utils/Constants.s"
