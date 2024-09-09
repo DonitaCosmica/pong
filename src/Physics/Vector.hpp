@@ -12,18 +12,18 @@ namespace pong {
     Vector &operator=(const Vector &);
     ~Vector() = default;
 
-    Vector(float, float);
+    Vector(int, int);
     Vector operator+(const Vector&) const;
     Vector operator-(const Vector&) const;
     Vector &operator+=(const Vector&);
     Vector &operator-=(const Vector&);
 
     Vector reflect(const Vector&) const;
-    Vector scale(float) const;
+    Vector scale(int) const;
     Vector &normalize();
 
-    float getMagnitude() const;
-    float angleBetween(const Vector&) const;
+    int getMagnitude() const;
+    int angleBetween(const Vector&) const;
   };
 }
 

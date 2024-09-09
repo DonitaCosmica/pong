@@ -2,6 +2,7 @@
 #define PLAYER_HPP
 
 #include <string>
+#include <memory>
 #include "Side.hpp"
 #include "Racquet.hpp"
 
@@ -15,12 +16,15 @@ namespace pong {
     Player &operator=(const Player &) = default;
     ~Player() = default;
 
-    Player(const std::string&, Side*, Racquet*);
+    Player(const std::string&, std::shared_ptr<Side>, std::shared_ptr<Racquet>);
+
+    std::string getName() const;
+    std::shared_ptr<Racquet> getRacquet() const;
 
   private:
     std::string name;
-    Side *side;
-    Racquet *racquet;
+    std::shared_ptr<Side> side;
+    std::shared_ptr<Racquet> racquet;
   };
 }
 

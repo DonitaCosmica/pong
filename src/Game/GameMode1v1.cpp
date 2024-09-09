@@ -2,12 +2,11 @@
 
 namespace pong {
   GameMode1v1::GameMode1v1(std::unique_ptr<Board> board, std::unique_ptr<Score> score,
-    std::unique_ptr<Player> player1, std::unique_ptr<Player> player2, std::unique_ptr<Ball> ball) :
-    board(std::move(board)), score(std::move(score)), player1(std::move(player1)),
-    player2(std::move(player2)), ball(std::move(ball)) {}
+    std::shared_ptr<Player> player1, std::shared_ptr<Player> player2, std::unique_ptr<Ball> ball)
+  : GameMode(std::move(board), std::move(score), std::move(player1), std::move(player2), std::move(ball)) {}
 
-  void GameMode1v1::initializeGame()
+  std::pair<std::string, std::string> GameMode1v1::getPlayerNames() const
   {
-
+    return std::make_pair(player1->getName(), player2->getName());
   }
 }

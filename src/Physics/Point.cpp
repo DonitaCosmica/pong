@@ -4,7 +4,7 @@
 namespace pong {
   Point::Point() : x(0), y(0) {}
 
-  Point::Point(float x, float y) : x(x), y(y) {}
+  Point::Point(int x, int y) : x(x), y(y) {}
 
   Point::Point(const Point &other)
   {
@@ -46,7 +46,7 @@ namespace pong {
     return *this;
   }
 
-  float Point::distanceTo(const Point &other) const
+  int Point::distanceTo(const Point &other) const
   {
     return std::sqrt((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y));
   }

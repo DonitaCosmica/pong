@@ -13,16 +13,16 @@ namespace pong {
     Ball &operator=(const Ball &) = default;
     ~Ball() = default;
 
-    Ball(Point, float, float);
+    Ball(int, int, int, int);
 
     float getRadius() const;
-    void setSpeed(float);
+    void setSpeed(int);
     void bounce(bool);
 
   private:
     Vector position;
-    float speed;
-    float radius;
+    int speed;
+    int radius;
   };
 }
 

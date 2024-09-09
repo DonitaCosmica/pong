@@ -2,10 +2,6 @@
 #define GAMEMODE1V1_HPP
 
 #include "GameMode.hpp"
-#include "../Entities/Board.hpp"
-#include "../Entities/Player.hpp"
-#include "../Entities/Ball.hpp"
-#include "../Entities/Score.hpp"
 
 namespace pong {
   class GameMode1v1 : public GameMode {
@@ -18,16 +14,10 @@ namespace pong {
     ~GameMode1v1() = default;
 
     GameMode1v1(std::unique_ptr<Board>, std::unique_ptr<Score>,
-      std::unique_ptr<Player>, std::unique_ptr<Player>, std::unique_ptr<Ball>);
-
-    void initializeGame() override;
+      std::shared_ptr<Player>, std::shared_ptr<Player>, std::unique_ptr<Ball>);
+    std::pair<std::string, std::string> getPlayerNames() const override;
 
   private:
-    std::unique_ptr<Board> board;
-    std::unique_ptr<Score> score;
-    std::unique_ptr<Player> player1;
-    std::unique_ptr<Player> player2;
-    std::unique_ptr<Ball> ball;
   };
 }
 

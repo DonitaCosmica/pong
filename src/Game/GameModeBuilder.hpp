@@ -1,6 +1,8 @@
 #ifndef GAMEMODEBUILDER_HPP
 #define GAMEMODEBUILDER_HPP
 
+#include <vector>
+#include "../Managers/UIManager.hpp"
 #include "../Entities/Board.hpp"
 #include "../Entities/Score.hpp"
 #include "../Entities/Player.hpp"
@@ -20,9 +22,9 @@ namespace pong {
 
     GameModeBuilder& setBoard(int, int);
     GameModeBuilder& setScore();
-    GameModeBuilder& addPlayer1();
-    GameModeBuilder& addPlayer2();
-    GameModeBuilder& addPlayer3();
+    GameModeBuilder& addPlayer1(UIManager*);
+    GameModeBuilder& addPlayer2(UIManager*);
+    GameModeBuilder& addPlayer3(UIManager*);
     GameModeBuilder& addBall();
     std::unique_ptr<GameMode1v1> build1v1();
     std::unique_ptr<GameMode2v1> build2v1();
@@ -30,8 +32,11 @@ namespace pong {
   private:
     std::unique_ptr<Board> board;
     std::unique_ptr<Score> score;
-    std::unique_ptr<Player> player1, player2, player3;
+    std::shared_ptr<Player> player1, player2, player3;
     std::unique_ptr<Ball> ball;
+    std::vector<std::shared_ptr<Side>> sides;
+
+    std::string getPlayerName();
   };
 }
 

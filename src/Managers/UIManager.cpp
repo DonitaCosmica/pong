@@ -3,6 +3,9 @@
 #include <algorithm>
 #include <unistd.h>
 #include <sstream>
+#include <cctype>
+
+#define COLPLAYER 3
 
 namespace pong {
   UIManager::UIManager(TerminalManager *terminalManager) : terminalManager(terminalManager)
@@ -32,6 +35,15 @@ namespace pong {
     int centerX = area.width / 2 - message.size() / 2;
     int centerY = area.height * posYFactor - (countLines(message) / 2);
     return { centerX, centerY };
+  }
+
+  std::string UIManager::extractIntegerWords(const std::string &str) const
+  {
+    auto it = std::find_if(str.begin(), str.end(), ::isdigit);
+    if(it != str.end())
+      return std::string(1, *it);
+
+    return "0";
   }
 
   void UIManager::drawBorder(const std::string &areaName) const
@@ -64,17 +76,49 @@ namespace pong {
     showMessages(menu, canvas.getArea("menu"));
   }
 
-  void UIManager::drawScore() const
+  void UIManager::drawScore(const std::string &player1Name, const std::string &player2Name, int pointsPlayer1, int pointsPlayer2) const
   {
+    const Canvas::Area &scoreArea = canvas.getArea("score");
     const std::string score =
       "******************************\n"
       "*           POINTS           *\n"
       "******************************\n"
-      "*   Nombre    **    Nombre   *\n"
-      "*     1       **      1      *\n"
-      "******************************\n";
+      "*             **             *\n"
+      "*             **             *\n"
+      "******************************\n"; 
 
     showMessages(score, canvas.getArea("score"));
+
+    int scoreLength = score.size() / countLines(score);
+    int namesRow = (scoreArea.height / 2) - (countLines(score) / 2) + COLPLAYER;
+    int pointsRow = namesRow + 1;
+    int startWriteCell = (scoreArea.width / 2) - (scoreLength / 2);
+
+    int player1Col = startWriteCell + player1Name.size();
+    std::cout << "\033[" << namesRow << ";" << (player1Name.size() == 5 ? player1Col : player1Col + 1) << "H" << player1Name;
+    std::cout << "\033[" << pointsRow << ";" << (player1Col + 2) << "H" << pointsPlayer1;
+
+    int player2Col = startWriteCell + (scoreLength / 2) + player2Name.size();
+    std::cout << "\033[" << namesRow << ";" << (player2Name.size() == 5 ? player2Col : player2Col + 1) << "H" << player2Name;
+    std::cout << "\033[" << pointsRow << ";" << (player2Col + 2) << "H" << pointsPlayer2;
+  }
+
+  void UIManager::drawInputAddPlayer(const std::string &player) const
+  {
+    const Canvas::Area &menuArea = canvas.getArea("menu");
+    const std::string inputAddPlayer =
+      "******************************\n"
+      "*          PLAYER " + extractIntegerWords(player) + "          *\n"
+      "******************************\n"
+      "*                            *\n"
+      "******************************\n";
+
+    showMessages(inputAddPlayer, menuArea);
+
+    int inputRow = (menuArea.height / 2) - (countLines(inputAddPlayer) / 2) + COLPLAYER;
+    int inputCol = menuArea.width / 2 - 2;
+
+    std::cout << "\033[" << inputRow << ";" << inputCol << "H";
   }
 
   void UIManager::showMessage(const std::string &message, MsgType type) const
@@ -104,12 +148,12 @@ namespace pong {
   // TODO: Adaptar el render para el tipo de canvas
   void UIManager::render(GameState state) const
   {
-    const Canvas::Area &area = getArea("menu");
+    const Canvas::Area &area = canvas.getArea("menu");
     if(terminalManager->hasTerminalResized())
     {
       system("clear");
 
-      const std::string &areaName = state == GameState::MENU ? "init" ? "game";
+      const std::string &areaName = state == GameState::MENU ? "init" : "game";
       drawBorder(areaName);
       return;
     }

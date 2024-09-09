@@ -119,24 +119,17 @@ CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/donitacosmica/Tarea/Pong/src/Game/../Enums/GameState.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/InputManager.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/UIManager.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Enums/GameState.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/TerminalManager.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Utils/Canvas.hpp \
- /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/string \
- /usr/include/c++/11/bits/char_traits.h /usr/include/c++/11/cstdint \
- /usr/include/c++/11/bits/localefwd.h \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Board.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Entity.hpp \
+ /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
+ /usr/include/c++/11/ios /usr/include/c++/11/bits/char_traits.h \
+ /usr/include/c++/11/cstdint /usr/include/c++/11/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
  /usr/include/c++/11/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/11/cctype \
- /usr/include/ctype.h /usr/include/c++/11/bits/ostream_insert.h \
+ /usr/include/ctype.h /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/locale_classes.h /usr/include/c++/11/string \
+ /usr/include/c++/11/bits/ostream_insert.h \
  /usr/include/c++/11/bits/cxxabi_forced.h \
  /usr/include/c++/11/bits/basic_string.h /usr/include/c++/11/string_view \
  /usr/include/c++/11/bits/string_view.tcc \
@@ -162,10 +155,7 @@ CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/iostream \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/bits/ios_base.h \
- /usr/include/c++/11/bits/locale_classes.h \
+ /usr/include/c++/11/bits/basic_string.tcc \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/system_error \
  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
@@ -180,4 +170,30 @@ CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Vector.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Side.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Racquet.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Enums/GameState.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/InputManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/UIManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Enums/GameState.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/TerminalManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Utils/Canvas.hpp \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/unordered_map.h \
+ /usr/include/c++/11/bits/erase_if.h

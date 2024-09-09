@@ -1,7 +1,12 @@
 #ifndef SIDE_HPP
 #define SIDE_HPP
 
+#include <memory>
 #include "Racquet.hpp"
+
+namespace pong {
+  class Player;
+}
 
 namespace pong {
   class Side {
@@ -18,14 +23,15 @@ namespace pong {
       RIGHT
     };
 
-    Side(Position, Racquet*);
+    Side(Position, std::shared_ptr<Player>);
 
     bool isLeft() const;
     bool isRight() const;
+    std::shared_ptr<Racquet> getRacquet() const;
 
   private:
     Position position;
-    Racquet *racquet;
+    std::shared_ptr<Player> player;
   };
 }
 

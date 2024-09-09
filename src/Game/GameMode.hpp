@@ -2,6 +2,11 @@
 #define GAMEMODE_HPP
 
 #include <memory>
+#include <utility>
+#include "../Entities/Board.hpp"
+#include "../Entities/Player.hpp"
+#include "../Entities/Ball.hpp"
+#include "../Entities/Score.hpp"
 
 namespace pong {
   class GameMode {
@@ -13,16 +18,25 @@ namespace pong {
     GameMode &operator=(const GameMode &) = default;
     virtual ~GameMode() = default;
 
+    GameMode(std::unique_ptr<Board>, std::unique_ptr<Score>,
+      std::shared_ptr<Player>, std::shared_ptr<Player>, std::unique_ptr<Ball>);
+
     enum class Mode {
       ONE_ONE,
       TWO_ONE
     };
 
     Mode getMode() const;
-    virtual void initializeGame() = 0;
+    std::pair<int, int> getScores() const;
+    virtual std::pair<std::string, std::string> getPlayerNames() const = 0;
 
   protected:
     Mode mode;
+    std::unique_ptr<Board> board;
+    std::unique_ptr<Score> score;
+    std::shared_ptr<Player> player1;
+    std::shared_ptr<Player> player2;
+    std::unique_ptr<Ball> ball;
   };
 }
 

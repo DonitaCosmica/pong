@@ -1,6 +1,16 @@
 #include "GameModeBuilder.hpp"
 
+#define getFuncName(val) #val
+
 namespace pong {
+  std::string GameModeBuilder::getPlayerName()
+  {
+    std::string playerName;
+    std::cin >> playerName;
+    playerName = playerName.substr(0, 5);
+    return playerName;
+  }
+
   GameModeBuilder& GameModeBuilder::setBoard(int width, int height)
   {
     board = std::make_unique<Board>(width, height);
@@ -13,21 +23,41 @@ namespace pong {
     return *this;
   }
 
-  GameModeBuilder& GameModeBuilder::addPlayer1()
+  GameModeBuilder& GameModeBuilder::addPlayer1(UIManager *uiManager)
   {
-    player1 = std::make_unique<Player>();
+    uiManager->drawInputAddPlayer(getFuncName(addPlayer1));
+    std::string playerName = getPlayerName();
+
+    auto racquet = std::make_shared<Racquet>();
+    auto player = std::make_shared<Player>(playerName, nullptr, racquet);
+
+    player1 = player;
+    sides.emplace_back(std::make_shared<Side>(Side::Position::LEFT, player));
     return *this;
   }
 
-  GameModeBuilder& GameModeBuilder::addPlayer2()
+  GameModeBuilder& GameModeBuilder::addPlayer2(UIManager *uiManager)
   {
-    player2 = std::make_unique<Player>();
+    uiManager->drawInputAddPlayer(getFuncName(addPlayer2));
+    std::string playerName = getPlayerName();
+
+    auto racquet = std::make_shared<Racquet>();
+    auto player = std::make_shared<Player>(playerName, nullptr, racquet);
+
+    player2 = player;
+    sides.emplace_back(std::make_shared<Side>(Side::Position::RIGHT, player));
     return *this;
   }
 
-  GameModeBuilder& GameModeBuilder::addPlayer3()
+  GameModeBuilder& GameModeBuilder::addPlayer3(UIManager *uiManager)
   {
-    player3 = std::make_unique<Player>();
+    uiManager->drawInputAddPlayer(getFuncName(addPlayer3));
+    std::string playerName = getPlayerName();
+
+    auto racquet = std::make_shared<Racquet>();
+    auto player = std::make_shared<Player>(playerName, nullptr, racquet);
+
+    player3 = player;
     return *this;
   }
 

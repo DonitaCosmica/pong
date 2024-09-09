@@ -27,21 +27,22 @@ int main (int argc, char *argv[])
       pong::GameMode::Mode selectedMode = menu.getSelectedMode();
 
       auto terminalSize = terminalManager->getTerminalSize();
-      int terminalWidth = terminalSize.cols - 2;
-      int terminalHeight = terminalSize.rows - 2;
+      int terminalWidth = terminalSize.cols;
+      int terminalHeight = terminalSize.rows - 1;
 
+      uiManager->render(pong::GameState::MENU);
       pong::GameModeBuilder builder;
-      builder.setBoard(terminalWidth, terminalHeight)
+      builder.setBoard(terminalWidth, (3 * terminalHeight) / 4)
         .setScore()
-        .addPlayer1()
-        .addPlayer2()
+        .addPlayer1(uiManager.get())
+        .addPlayer2(uiManager.get())
         .addBall();
 
       std::unique_ptr<pong::GameMode> gameMode;
       if(selectedMode == pong::GameMode::Mode::ONE_ONE)
         gameMode = builder.build1v1();
       else if(selectedMode == pong::GameMode::Mode::TWO_ONE)
-        gameMode = builder.addPlayer3().build2v1();
+        gameMode = builder.addPlayer3(uiManager.get()).build2v1();
 
       auto game = pong::Game::Builder()
         .setUIManager(uiManager.get())

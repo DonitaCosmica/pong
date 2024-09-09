@@ -14,7 +14,9 @@ namespace pong {
       try
       {
         system("clear");
-        uiManager->drawScore();
+        auto [player1, player2] = gameMode->getPlayerNames();
+        auto [scoreTeam1, scoreTeam2] = gameMode->getScores();
+        uiManager->drawScore(player1, player2, scoreTeam1, scoreTeam2);
         uiManager->drawBorder("game");
         getchar();
       }

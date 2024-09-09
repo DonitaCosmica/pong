@@ -29,8 +29,9 @@ namespace pong {
     void drawRacquet() const;
     void setBoard(const Canvas::Area&) const;
     void drawMenu() const;
-    void drawScore() const;
+    void drawScore(const std::string&, const std::string&, int, int) const;
     void drawBorder(const std::string&) const;
+    void drawInputAddPlayer(const std::string&) const;
 
     void render(GameState) const;
     void showMessage(const std::string&, MsgType) const;
@@ -48,6 +49,7 @@ namespace pong {
 
     void showMessages(const std::string&, const Canvas::Area&) const;
     int countLines(const std::string&) const;
+    std::string extractIntegerWords(const std::string&) const;
     std::pair<int, int> centerPos(const std::string&, float, const Canvas::Area&) const;
   };
 }

@@ -10,16 +10,16 @@ namespace pong {
     Point &operator=(const Point &);
     ~Point() = default;
 
-    Point(float, float);
+    Point(int, int);
     Point operator+(const Point&) const;
     Point operator-(const Point&) const;
     Point &operator+=(const Point&);
     Point &operator-=(const Point&);
 
-    float distanceTo(const Point&) const;
+    int distanceTo(const Point&) const;
 
-    float x;
-    float y;
+    int x;
+    int y;
   };
 }
 

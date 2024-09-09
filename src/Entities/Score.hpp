@@ -13,6 +13,8 @@ namespace pong {
     Score &operator=(const Score &) = default;
     ~Score() = default;
 
+    int getTeam1Score() const;
+    int getTeam2Score() const;
     void updateScore(Player&);
 
   private:
