@@ -5,6 +5,7 @@
 #include "../Enums/GameState.hpp"
 #include "../Managers/InputManager.hpp"
 #include "../Managers/UIManager.hpp"
+#include <memory>
 
 namespace pong {
   class Game {
@@ -26,6 +27,8 @@ namespace pong {
     UIManager *uiManager;
     InputManager *inputManager;
     GameMode *gameMode;
+
+    void initializeGame();
   };
 }
 

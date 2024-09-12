@@ -19,6 +19,7 @@ namespace pong {
     Player(const std::string&, std::shared_ptr<Side>, std::shared_ptr<Racquet>);
 
     std::string getName() const;
+    std::shared_ptr<Side> getSide() const;
     std::shared_ptr<Racquet> getRacquet() const;
 
   private:

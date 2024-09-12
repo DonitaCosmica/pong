@@ -11,6 +11,9 @@
 #include <iostream>
 #include <memory>
 
+std::unique_ptr<pong::GameMode> configureGameMode(pong::GameMode::Mode, pong::UIManager*, pong::TerminalManager*);
+void runGameLoop(pong::UIManager*, pong::InputManager*, std::unique_ptr<pong::GameMode>&);
+
 int main (int argc, char *argv[])
 {
   std::unique_ptr<pong::InputManager> inputManager = std::make_unique<pong::InputManager>();
@@ -25,32 +28,9 @@ int main (int argc, char *argv[])
     {
       uiManager->drawMenu();
       pong::GameMode::Mode selectedMode = menu.getSelectedMode();
-
-      auto terminalSize = terminalManager->getTerminalSize();
-      int terminalWidth = terminalSize.cols;
-      int terminalHeight = terminalSize.rows - 1;
-
       uiManager->render(pong::GameState::MENU);
-      pong::GameModeBuilder builder;
-      builder.setBoard(terminalWidth, (3 * terminalHeight) / 4)
-        .setScore()
-        .addPlayer1(uiManager.get())
-        .addPlayer2(uiManager.get())
-        .addBall();
-
-      std::unique_ptr<pong::GameMode> gameMode;
-      if(selectedMode == pong::GameMode::Mode::ONE_ONE)
-        gameMode = builder.build1v1();
-      else if(selectedMode == pong::GameMode::Mode::TWO_ONE)
-        gameMode = builder.addPlayer3(uiManager.get()).build2v1();
-
-      auto game = pong::Game::Builder()
-        .setUIManager(uiManager.get())
-        .setInputManager(inputManager.get())
-        .setGameMode(gameMode.get())
-        .build();
-
-      game->run();
+      std::unique_ptr<pong::GameMode> gameMode = configureGameMode(selectedMode, uiManager.get(), terminalManager.get());
+      runGameLoop(uiManager.get(), inputManager.get(), gameMode);
       gameRunning = false;
     }
     catch (const std::exception &e)
@@ -61,4 +41,32 @@ int main (int argc, char *argv[])
   }
 
   return 0;
+}
+
+std::unique_ptr<pong::GameMode> configureGameMode(pong::GameMode::Mode selectedMode, pong::UIManager* uiManager, pong::TerminalManager* terminalManager)
+{
+  pong::GameModeBuilder builder;
+  builder.setBoard(terminalManager->getTerminalSize())
+    .setScore()
+    .addPlayer1(uiManager)
+    .addPlayer2(uiManager)
+    .addBall();
+
+  if (selectedMode == pong::GameMode::Mode::ONE_ONE)
+    return builder.build1v1();
+  else if (selectedMode == pong::GameMode::Mode::TWO_ONE)
+    return builder.addPlayer3(uiManager).build2v1();
+
+  throw std::runtime_error("Modo de juego no válido");
+}
+
+void runGameLoop(pong::UIManager* uiManager, pong::InputManager* inputManager, std::unique_ptr<pong::GameMode>& gameMode)
+{
+  auto game = pong::Game::Builder()
+    .setUIManager(uiManager)
+    .setInputManager(inputManager)
+    .setGameMode(gameMode.get())
+    .build();
+
+  game->run();
 }

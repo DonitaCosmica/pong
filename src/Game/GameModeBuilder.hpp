@@ -7,6 +7,7 @@
 #include "../Entities/Score.hpp"
 #include "../Entities/Player.hpp"
 #include "../Entities/Ball.hpp"
+#include "../Managers/TerminalManager.hpp"
 #include "GameMode1v1.hpp"
 #include "GameMode2v1.hpp"
 
@@ -20,7 +21,7 @@ namespace pong {
     GameModeBuilder &operator=(const GameModeBuilder &) = delete;
     ~GameModeBuilder() = default;
 
-    GameModeBuilder& setBoard(int, int);
+    GameModeBuilder& setBoard(TerminalManager::TerminalSize);
     GameModeBuilder& setScore();
     GameModeBuilder& addPlayer1(UIManager*);
     GameModeBuilder& addPlayer2(UIManager*);
@@ -34,7 +35,6 @@ namespace pong {
     std::unique_ptr<Score> score;
     std::shared_ptr<Player> player1, player2, player3;
     std::unique_ptr<Ball> ball;
-    std::vector<std::shared_ptr<Side>> sides;
 
     std::string getPlayerName();
   };

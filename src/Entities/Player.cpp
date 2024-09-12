@@ -6,5 +6,7 @@ namespace pong {
 
   std::string Player::getName() const { return name; }
 
+  std::shared_ptr<Side> Player::getSide() const { return side; }
+
   std::shared_ptr<Racquet> Player::getRacquet() const { return racquet; }
 }

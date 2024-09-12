@@ -12,4 +12,12 @@ namespace pong {
   {
     return std::make_pair(score->getTeam1Score(), score->getTeam2Score());
   }
+
+  const Board& GameMode::getBoard() const { return *board; }
+
+  const Player& GameMode::getPlayer1() const { return *player1; }
+
+  const Player& GameMode::getPlayer2() const { return *player2; }
+
+  const Ball& GameMode::getBall() const { return *ball; }
 }

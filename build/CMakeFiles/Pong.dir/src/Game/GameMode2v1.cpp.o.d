@@ -174,13 +174,11 @@ CMakeFiles/Pong.dir/src/Game/GameMode2v1.cpp.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Side.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Racquet.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Vector.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Side.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Racquet.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp

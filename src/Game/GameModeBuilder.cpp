@@ -1,4 +1,5 @@
 #include "GameModeBuilder.hpp"
+#include "../Physics/Point.hpp"
 
 #define getFuncName(val) #val
 
@@ -11,9 +12,20 @@ namespace pong {
     return playerName;
   }
 
-  GameModeBuilder& GameModeBuilder::setBoard(int width, int height)
+  GameModeBuilder& GameModeBuilder::setBoard(TerminalManager::TerminalSize terminalSize)
   {
-    board = std::make_unique<Board>(width, height);
+    int terminalWidth = terminalSize.cols;
+    int terminalHeight = terminalSize.rows - 1;
+    int height = terminalHeight / 4;
+
+    Point origin(2, height);
+    Point top(terminalWidth / 2, height);
+    Point bottom(terminalWidth / 2, terminalHeight - 1);
+    Point left(2, height + (3 * height) / 2);
+    Point right(terminalWidth - 1, height + (3 * height) / 2);
+
+    std::vector<Point> points = { origin, top, bottom, left, right };
+    board = std::make_unique<Board>(points, terminalWidth - 2, 3 * height);
     return *this;
   }
 
@@ -28,11 +40,18 @@ namespace pong {
     uiManager->drawInputAddPlayer(getFuncName(addPlayer1));
     std::string playerName = getPlayerName();
 
-    auto racquet = std::make_shared<Racquet>();
-    auto player = std::make_shared<Player>(playerName, nullptr, racquet);
+    int racquetHeight = board->getHeight() / 2;
+    int racquetWidth = 2;
 
-    player1 = player;
-    sides.emplace_back(std::make_shared<Side>(Side::Position::LEFT, player));
+    Point origin = board->getOrigin();
+    Point top(origin.x + 2, origin.y + (racquetHeight / 2));
+    Point bottom(origin.x + 2, origin.y + racquetHeight * 1.5f);
+    std::vector<Point> points = { top, bottom };
+
+    auto racquet = std::make_shared<Racquet>(points, racquetWidth, racquetHeight);
+    auto side = std::make_shared<Side>(Side::Position::LEFT, player1);
+    player1 = std::make_shared<Player>(playerName, side, racquet);
+
     return *this;
   }
 
@@ -41,11 +60,17 @@ namespace pong {
     uiManager->drawInputAddPlayer(getFuncName(addPlayer2));
     std::string playerName = getPlayerName();
 
-    auto racquet = std::make_shared<Racquet>();
-    auto player = std::make_shared<Player>(playerName, nullptr, racquet);
+    int racquetHeight = board->getHeight() / 2;
+    int racquetWidth = 2;
 
-    player2 = player;
-    sides.emplace_back(std::make_shared<Side>(Side::Position::RIGHT, player));
+    Point origin = board->getOrigin();
+    Point top(origin.x + board->getWidth() - 4, origin.y + (racquetHeight / 2));
+    Point bottom(origin.x + board->getWidth() - 4, origin.y + racquetHeight * 1.5f);
+    std::vector<Point> points = { top, bottom };
+
+    auto racquet = std::make_shared<Racquet>(points, racquetWidth, racquetHeight);
+    auto side = std::make_shared<Side>(Side::Position::RIGHT, player2);
+    player2 = std::make_shared<Player>(playerName, side, racquet);
     return *this;
   }
 
@@ -63,7 +88,11 @@ namespace pong {
 
   GameModeBuilder& GameModeBuilder::addBall()
   {
-    ball = std::make_unique<Ball>();
+    Point origin = board->getOrigin();
+    int x = (board->getWidth() + 2) / 2;
+    int y = origin.y + board->getHeight() / 2;
+
+    ball = std::make_unique<Ball>(x, y);
     return *this;
   }
 

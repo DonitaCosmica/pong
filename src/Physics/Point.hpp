@@ -1,6 +1,8 @@
 #ifndef POINT_HPP
 #define POINT_HPP
 
+#include <string>
+
 namespace pong {
   struct Point {
     Point();
@@ -17,6 +19,7 @@ namespace pong {
     Point &operator-=(const Point&);
 
     int distanceTo(const Point&) const;
+    std::string to_string() const;
 
     int x;
     int y;

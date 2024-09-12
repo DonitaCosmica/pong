@@ -6,11 +6,18 @@
 #include <cctype>
 
 #define COLPLAYER 3
+#define RED "\033[91m"
+#define BLUE "\033[94m"
+#define BLACK "\033[30m"
+#define GREEN "\033[92m"
+#define YELLOW "\033[93m"
+#define CYAN "\033[96m"
+#define RESET "\033[0m"
 
 namespace pong {
   UIManager::UIManager(TerminalManager *terminalManager) : terminalManager(terminalManager)
   {
-    system("clear");
+    clearScreen();
 
     auto terminalSize = terminalManager->getTerminalSize();
     int terminalWidth = terminalSize.cols;
@@ -46,6 +53,8 @@ namespace pong {
     return "0";
   }
 
+  void UIManager::clearScreen() const { system("clear"); }
+
   void UIManager::drawBorder(const std::string &areaName) const
   {
     const Canvas::Area& borderArea = canvas.getArea(areaName);
@@ -53,12 +62,12 @@ namespace pong {
     int cols = borderArea.width;
     int offsetY = borderArea.y;
 
-    std::cout << "\033[" << offsetY << ";0H" << std::string(cols, '#') << std::endl;
-
+    std::cout << "\033[" << offsetY << ";0H";
+    std::cout << BLACK << std::string(cols, '#') << RESET << std::endl;
     for(int i = 0; i < rows - 2; i++)
-      std::cout << "#" << std::string(cols - 2, ' ') << "#\n";
+      std::cout << BLACK << "#" << RESET << std::string(cols - 2, ' ') << BLACK << "#" << RESET << std::endl;
 
-    std::cout << std::string(cols, '#') << std::endl;
+    std::cout << BLACK << std::string(cols, '#') << RESET << std::endl;
   }
 
   void UIManager::drawMenu() const
@@ -76,7 +85,7 @@ namespace pong {
     showMessages(menu, canvas.getArea("menu"));
   }
 
-  void UIManager::drawScore(const std::string &player1Name, const std::string &player2Name, int pointsPlayer1, int pointsPlayer2) const
+  void UIManager::drawScore(std::string &player1Name, std::string &player2Name, int pointsPlayer1, int pointsPlayer2) const
   {
     const Canvas::Area &scoreArea = canvas.getArea("score");
     const std::string score =
@@ -89,17 +98,20 @@ namespace pong {
 
     showMessages(score, canvas.getArea("score"));
 
+    std::transform(player1Name.begin(), player1Name.end(), player1Name.begin(), ::toupper);
+    std::transform(player2Name.begin(), player2Name.end(), player2Name.begin(), ::toupper);
+
     int scoreLength = score.size() / countLines(score);
     int namesRow = (scoreArea.height / 2) - (countLines(score) / 2) + COLPLAYER;
     int pointsRow = namesRow + 1;
     int startWriteCell = (scoreArea.width / 2) - (scoreLength / 2);
 
     int player1Col = startWriteCell + player1Name.size();
-    std::cout << "\033[" << namesRow << ";" << (player1Name.size() == 5 ? player1Col : player1Col + 1) << "H" << player1Name;
+    std::cout << "\033[" << namesRow << ";" << (player1Name.size() == 5 ? player1Col : player1Col + 1) << "H" << BLUE << player1Name << RESET;
     std::cout << "\033[" << pointsRow << ";" << (player1Col + 2) << "H" << pointsPlayer1;
 
     int player2Col = startWriteCell + (scoreLength / 2) + player2Name.size();
-    std::cout << "\033[" << namesRow << ";" << (player2Name.size() == 5 ? player2Col : player2Col + 1) << "H" << player2Name;
+    std::cout << "\033[" << namesRow << ";" << (player2Name.size() == 5 ? player2Col : player2Col + 1) << "H" << RED << player2Name << RESET;
     std::cout << "\033[" << pointsRow << ";" << (player2Col + 2) << "H" << pointsPlayer2;
   }
 
@@ -117,15 +129,54 @@ namespace pong {
 
     int inputRow = (menuArea.height / 2) - (countLines(inputAddPlayer) / 2) + COLPLAYER;
     int inputCol = menuArea.width / 2 - 2;
-
     std::cout << "\033[" << inputRow << ";" << inputCol << "H";
+  }
+
+  void UIManager::drawRacquet(const Racquet &racquet, const Side &side) const
+  {
+    int x = racquet.getTop().x;
+    int y = racquet.getTop().y;
+
+    for(int i = 0; i < racquet.getHeight() + 1; i++)
+    {
+      for(int j = 0; j < racquet.getWidth(); j++)
+      {
+        std::cout << "\033[" << (y + i) << ";" << (x + j) << "H";
+        side.isLeft()
+          ? std::cout << RED << "#" << RESET << std::endl
+          : std::cout << BLUE << "#" << RESET << std::endl;
+      }
+    }
+  }
+
+  void UIManager::drawBall(const Ball& ball) const
+  {
+    int x = ball.getPoint().x;
+    int y = ball.getPoint().y;
+
+    std::cout << "\033[" << y << ";" << x << "H";
+    std::cout << BLACK << "●" << RESET << std::endl;
   }
 
   void UIManager::showMessage(const std::string &message, MsgType type) const
   {
     const Canvas::Area &area = canvas.getArea(type == MsgType::ERROR ? "menu" : "game");
     auto [centerX, centerY] = centerPos(message, dictionaryYFactor.at(type), area);
-    std::cout << "\33[" << centerY + area.y << ";" << centerX + area.x << "H" << message << std::endl;
+    std::cout << "\33[" << centerY + area.y << ";" << centerX + area.x << "H";
+
+    switch(type)
+    {
+      case MsgType::WINNER:
+        std::cout << YELLOW << message << RESET << std::endl;
+        break;
+      case MsgType::NORMAL:
+        std::cout << GREEN << message << RESET << std::endl;
+        break;
+      case MsgType::ERROR:
+        std::cout << RED << message << RESET << std::endl;
+        break;
+    }
+
     usleep(2000000);
   }
 

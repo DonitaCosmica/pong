@@ -175,16 +175,14 @@ CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Side.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Racquet.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Vector.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Side.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Racquet.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Enums/GameState.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/InputManager.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/UIManager.hpp \
@@ -196,4 +194,7 @@ CMakeFiles/Pong.dir/src/Game/GameBuilder.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h
+ /usr/include/c++/11/bits/erase_if.h \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Racquet.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Ball.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Side.hpp

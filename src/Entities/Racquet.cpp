@@ -1,6 +1,10 @@
 #include "Racquet.hpp"
 
 namespace pong {
-  Racquet::Racquet(int width, int height, float speed)
-    : Entity({ Point(0, 0), Point(0, 0) }, width, height), speed(speed) {}
+  Racquet::Racquet(std::vector<Point> &points, int width, int height)
+    : Entity(points, width, height) {}
+
+  const Point& Racquet::getTop() const { return points[0]; }
+
+  const Point& Racquet::getBottom() const { return points[1]; }
 }

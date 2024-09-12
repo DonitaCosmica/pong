@@ -1,5 +1,6 @@
 #include "Point.hpp"
 #include <cmath>
+#include <sstream>
 
 namespace pong {
   Point::Point() : x(0), y(0) {}
@@ -49,5 +50,11 @@ namespace pong {
   int Point::distanceTo(const Point &other) const
   {
     return std::sqrt((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y));
+  }
+
+  std::string Point::to_string() const {
+    std::ostringstream oss;
+    oss << "(" << x << ", " << y << ")";
+    return oss.str();
   }
 }

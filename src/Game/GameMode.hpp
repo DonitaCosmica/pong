@@ -28,6 +28,10 @@ namespace pong {
 
     Mode getMode() const;
     std::pair<int, int> getScores() const;
+    const Board& getBoard() const;
+    const Player& getPlayer1() const;
+    const Player& getPlayer2() const;
+    const Ball& getBall() const;
     virtual std::pair<std::string, std::string> getPlayerNames() const = 0;
 
   protected:

@@ -4,6 +4,9 @@
 #include "../Enums/GameState.hpp"
 #include "TerminalManager.hpp"
 #include "../Utils/Canvas.hpp"
+#include "../Entities/Racquet.hpp"
+#include "../Entities/Ball.hpp"
+#include "../Entities/Side.hpp"
 #include <string>
 #include <unordered_map>
 
@@ -24,12 +27,13 @@ namespace pong {
       NORMAL,
       ERROR
     };
- 
-    void drawBall() const;
-    void drawRacquet() const;
+
+    void clearScreen() const;
+    void drawBall(const Ball&) const;
+    void drawRacquet(const Racquet&, const Side&) const;
     void setBoard(const Canvas::Area&) const;
     void drawMenu() const;
-    void drawScore(const std::string&, const std::string&, int, int) const;
+    void drawScore(std::string&, std::string&, int, int) const;
     void drawBorder(const std::string&) const;
     void drawInputAddPlayer(const std::string&) const;
 

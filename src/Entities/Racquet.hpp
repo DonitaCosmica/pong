@@ -13,10 +13,13 @@ namespace pong {
     Racquet &operator=(const Racquet &) = default;
     ~Racquet() = default;
 
-    Racquet(int, int, float);
+    Racquet(std::vector<Point>&, int, int);
+
+    const Point& getTop() const;
+    const Point& getBottom() const;
 
   private:
-    float speed;
+    float speed { 1.5f };
   };
 }
 
