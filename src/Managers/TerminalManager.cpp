@@ -25,5 +25,5 @@ namespace pong {
   {
     TerminalSize newSize = fetchTerminalSize();
     return newSize.rows != currentSize.rows || newSize.cols != currentSize.cols;
-  }  
+  }
 }

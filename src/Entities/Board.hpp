@@ -19,9 +19,18 @@ namespace pong {
     const Point& getTop() const;
     const Point& getBottom() const;
     const Point& getLeft() const;
-    const Point& getRight() const; 
+    const Point& getRight() const;
+
+    int getTopLimit() const;
+    int getBottomLimit() const;
+    int getLeftLimit() const;
+    int getRightLimit() const;
 
   private:
+    int topLimit;
+    int bottomLimit;
+    int leftLimit;
+    int rightLimit;
   };
 }
 

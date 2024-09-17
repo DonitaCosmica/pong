@@ -18,8 +18,7 @@ namespace pong {
     const Point& getTop() const;
     const Point& getBottom() const;
 
-  private:
-    float speed { 1.5f };
+    void setPosition(const Point&, const Point&);
   };
 }
 

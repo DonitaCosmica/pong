@@ -27,8 +27,6 @@ namespace pong {
     UIManager *uiManager;
     InputManager *inputManager;
     GameMode *gameMode;
-
-    void initializeGame();
   };
 }
 

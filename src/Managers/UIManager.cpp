@@ -5,9 +5,10 @@
 #include <sstream>
 #include <cctype>
 
-#define COLPLAYER 3
-#define RED "\033[91m"
-#define BLUE "\033[94m"
+#define COLPLAYER 4
+#define BACKGROUND "\033[48;2;0;0;0m"
+#define RED "\033[38;2;255;0;0m"
+#define BLUE "\033[38;2;0;0;255m"
 #define BLACK "\033[30m"
 #define GREEN "\033[92m"
 #define YELLOW "\033[93m"
@@ -24,10 +25,10 @@ namespace pong {
     int terminalHeight = terminalSize.rows - 1;
 
     canvas = Canvas(terminalWidth, terminalHeight);
-    canvas.defineArea("init", 0, 0, terminalWidth, terminalHeight);
-    canvas.defineArea("menu", 0, 0, terminalWidth, terminalHeight);
-    canvas.defineArea("score", 0, 0, terminalWidth, terminalHeight / 4);
-    canvas.defineArea("game", 0, terminalHeight / 4, terminalWidth, (3 * terminalHeight) / 4 + 3);
+    canvas.defineArea("init", 1, 1, terminalWidth, terminalHeight);
+    canvas.defineArea("menu", 1, 1, terminalWidth, terminalHeight);
+    canvas.defineArea("score", 1, 1, terminalWidth, terminalHeight / 4);
+    canvas.defineArea("game", 1, terminalHeight / 4 - 1, terminalWidth, (3 * terminalHeight) / 4 + 3);
 
     drawBorder("init");
   }
@@ -55,19 +56,33 @@ namespace pong {
 
   void UIManager::clearScreen() const { system("clear"); }
 
+  void UIManager::drawBackground(const Canvas::Area &area) const
+  {
+    for(int i = 0; i < area.height; i++)
+    {
+      std::cout << "\033[" << (area.y + i) << ";" << area.x << "H";
+      std::cout << BACKGROUND << std::string(area.width, ' ') << RESET;
+    }
+  }
+
   void UIManager::drawBorder(const std::string &areaName) const
   {
     const Canvas::Area& borderArea = canvas.getArea(areaName);
     int rows = borderArea.height;
     int cols = borderArea.width;
     int offsetY = borderArea.y;
+    int offsetX = borderArea.x;
 
-    std::cout << "\033[" << offsetY << ";0H";
-    std::cout << BLACK << std::string(cols, '#') << RESET << std::endl;
-    for(int i = 0; i < rows - 2; i++)
-      std::cout << BLACK << "#" << RESET << std::string(cols - 2, ' ') << BLACK << "#" << RESET << std::endl;
+    std::cout << "\033[" << offsetY << ";" << offsetX << "H";
+    std::cout << BACKGROUND << std::string(cols, '#') << RESET;
+    for(int i = 1; i < rows - 1; i++)
+    {
+      std::cout << "\033[" << (offsetY + i) << ";" << offsetX << "H";
+      std::cout << BACKGROUND << "#" << std::string(cols - 2, ' ') << "#" << RESET;
+    }
 
-    std::cout << BLACK << std::string(cols, '#') << RESET << std::endl;
+    std::cout << "\033[" << (offsetY + rows - 1) << ";" << offsetX << "H";
+    std::cout << BACKGROUND << std::string(cols, '#') << RESET;
   }
 
   void UIManager::drawMenu() const
@@ -85,9 +100,11 @@ namespace pong {
     showMessages(menu, canvas.getArea("menu"));
   }
 
-  void UIManager::drawScore(std::string &player1Name, std::string &player2Name, int pointsPlayer1, int pointsPlayer2) const
+  void UIManager::drawScore(std::string &player1Name, std::string &player2Name) const
   {
     const Canvas::Area &scoreArea = canvas.getArea("score");
+    drawBackground(scoreArea);
+
     const std::string score =
       "******************************\n"
       "*           POINTS           *\n"
@@ -103,16 +120,24 @@ namespace pong {
 
     int scoreLength = score.size() / countLines(score);
     int namesRow = (scoreArea.height / 2) - (countLines(score) / 2) + COLPLAYER;
-    int pointsRow = namesRow + 1;
     int startWriteCell = (scoreArea.width / 2) - (scoreLength / 2);
 
-    int player1Col = startWriteCell + player1Name.size();
-    std::cout << "\033[" << namesRow << ";" << (player1Name.size() == 5 ? player1Col : player1Col + 1) << "H" << BLUE << player1Name << RESET;
-    std::cout << "\033[" << pointsRow << ";" << (player1Col + 2) << "H" << pointsPlayer1;
+    int player1Col = startWriteCell + player1Name.size() + 1;
+    std::cout << "\033[" << namesRow << ";" << (player1Name.size() == 5 ? player1Col : player1Col + 1) << "H" << BACKGROUND << player1Name << RESET;
 
-    int player2Col = startWriteCell + (scoreLength / 2) + player2Name.size();
-    std::cout << "\033[" << namesRow << ";" << (player2Name.size() == 5 ? player2Col : player2Col + 1) << "H" << RED << player2Name << RESET;
-    std::cout << "\033[" << pointsRow << ";" << (player2Col + 2) << "H" << pointsPlayer2;
+    int player2Col = startWriteCell + (scoreLength / 2) + player2Name.size() + 1;
+    std::cout << "\033[" << namesRow << ";" << (player2Name.size() == 5 ? player2Col : player2Col + 1) << "H" << BACKGROUND << player2Name << RESET;
+  }
+
+  void UIManager::drawPoints(const Side &side, int pointsPlayer, std::string &playerName)
+  {
+    const Canvas::Area &scoreArea = canvas.getArea("score");
+    int scoreLength = 31;
+    int pointsRow = (scoreArea.height / 2) + 2;
+    int startWriteCell = (scoreArea.width / 2) - (scoreLength / 2);
+    int playerCol = startWriteCell + (side.isLeft() ? 0 : (scoreLength / 2)) + playerName.size() + 3;
+
+    std::cout << "\033[" << pointsRow << ";" << playerCol << "H" << BACKGROUND << pointsPlayer << RESET;
   }
 
   void UIManager::drawInputAddPlayer(const std::string &player) const
@@ -128,7 +153,7 @@ namespace pong {
     showMessages(inputAddPlayer, menuArea);
 
     int inputRow = (menuArea.height / 2) - (countLines(inputAddPlayer) / 2) + COLPLAYER;
-    int inputCol = menuArea.width / 2 - 2;
+    int inputCol = menuArea.width / 2 - 1;
     std::cout << "\033[" << inputRow << ";" << inputCol << "H";
   }
 
@@ -143,8 +168,8 @@ namespace pong {
       {
         std::cout << "\033[" << (y + i) << ";" << (x + j) << "H";
         side.isLeft()
-          ? std::cout << RED << "#" << RESET << std::endl
-          : std::cout << BLUE << "#" << RESET << std::endl;
+          ? std::cout << RED << BACKGROUND << "#" << RESET << std::endl
+          : std::cout << BLUE << BACKGROUND << "#" << RESET << std::endl;
       }
     }
   }
@@ -155,7 +180,7 @@ namespace pong {
     int y = ball.getPoint().y;
 
     std::cout << "\033[" << y << ";" << x << "H";
-    std::cout << BLACK << "●" << RESET << std::endl;
+    std::cout << BACKGROUND << "●" << RESET << std::endl;
   }
 
   void UIManager::showMessage(const std::string &message, MsgType type) const
@@ -190,40 +215,41 @@ namespace pong {
     while(std::getline(stream, line))
     {
       int centerX = area.width / 2 - line.size() / 2;
-      std::cout << "\033[" << (area.y + centerY + lineNumber) << ";" << centerX + area.x << "H" << line;
+      std::cout << "\033[" << (area.y + centerY + lineNumber) << ";" << (centerX + area.x) << "H";
+      std::cout << BACKGROUND << line << RESET;
       lineNumber++;
     }
   }
 
-  // TODO: Dibujar marcador y borde del juego al llamar una funcion
-  // TODO: Adaptar el render para el tipo de canvas
-  void UIManager::render(GameState state) const
+  void UIManager::render(GameState state)
   {
-    const Canvas::Area &area = canvas.getArea("menu");
+    const std::string &areaName = state == GameState::MENU ? "menu" : "game";
+    const Canvas::Area &area = canvas.getArea(areaName);
+
     if(terminalManager->hasTerminalResized())
     {
-      system("clear");
+      auto terminalSize = terminalManager->getTerminalSize();
+      int terminalWidth = terminalSize.cols;
+      int terminalHeight = terminalSize.rows - 1;
+      canvas.updateSize(terminalWidth, terminalHeight);
 
-      const std::string &areaName = state == GameState::MENU ? "init" : "game";
+      clearScreen();
       drawBorder(areaName);
       return;
     }
 
-    auto terminalSize = terminalManager->getTerminalSize();
-    std::cout << "\033[" << 1 << ";" << 1 << "H";
-
     int borderThickness = 1;
-    int height = terminalSize.rows - 2;
-    int width = terminalSize.cols - 2;
+    int height = area.height - 2;
+    int width = area.width - 2;
 
-    std::cout << "\033[" << (borderThickness + 1) << ";" << (borderThickness + 1) << "H";
+    std::cout << "\033[" << (borderThickness + area.y) << ";" << (borderThickness + area.x) << "H";
 
     for(int i = 0; i < height; i++)
     {
-      std::cout << std::string(width, ' ');
-      std::cout << "\033[" << (borderThickness + i +1) << ";" << (borderThickness + 1) << "H";
+      std::cout << "\033[" << (borderThickness + i + area.y) << ";" << (borderThickness + area.x) << "H";
+      std::cout << BACKGROUND << std::string(width, ' ') << RESET;
     }
 
-    std::cout << "\033[" << (borderThickness + height + 1) << ";" << (borderThickness + 1) << "H";
+    std::cout << "\033[" << (borderThickness + area.y) << ";" << (borderThickness + area.x) << "H";
   }
 }

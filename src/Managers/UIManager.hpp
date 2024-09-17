@@ -29,15 +29,17 @@ namespace pong {
     };
 
     void clearScreen() const;
+    void drawBackground(const Canvas::Area&) const;
     void drawBall(const Ball&) const;
     void drawRacquet(const Racquet&, const Side&) const;
     void setBoard(const Canvas::Area&) const;
     void drawMenu() const;
-    void drawScore(std::string&, std::string&, int, int) const;
+    void drawScore(std::string&, std::string&) const;
+    void drawPoints(const Side&, int, std::string&);
     void drawBorder(const std::string&) const;
     void drawInputAddPlayer(const std::string&) const;
 
-    void render(GameState) const;
+    void render(GameState);
     void showMessage(const std::string&, MsgType) const;
 
   private:

@@ -184,6 +184,9 @@ CMakeFiles/Pong.dir/src/Game/Game.cpp.o: \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Enums/GameState.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/InputManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/KeyboardManager.hpp \
+ /usr/include/curses.h /usr/include/ncurses_dll.h /usr/include/unctrl.h \
+ /usr/include/curses.h \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/UIManager.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Enums/GameState.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/TerminalManager.hpp \
@@ -196,4 +199,15 @@ CMakeFiles/Pong.dir/src/Game/Game.cpp.o: \
  /usr/include/c++/11/bits/erase_if.h \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Racquet.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Ball.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Side.hpp
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Side.hpp \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/RacquetManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Board.hpp

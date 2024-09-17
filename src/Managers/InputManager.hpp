@@ -1,6 +1,8 @@
 #ifndef INPUTMANAGER_HPP
 #define INPUTMANAGER_HPP
 
+#include "KeyboardManager.hpp"
+
 namespace pong {
   class InputManager {
   public:
@@ -11,8 +13,13 @@ namespace pong {
     InputManager &operator=(const InputManager &) = default;
     ~InputManager() = default;
 
+    void start();
+    void update();
+    bool isKeyPressed(int) const;
+
   private:
-    
+    mutable int lastKey = ERR;
+    KeyboardManager keyboardManager;
   };
 }
 

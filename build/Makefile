@@ -489,6 +489,30 @@ src/Managers/BallManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/BallManager.cpp.s
 .PHONY : src/Managers/BallManager.cpp.s
 
+src/Managers/CollisionManager.o: src/Managers/CollisionManager.cpp.o
+.PHONY : src/Managers/CollisionManager.o
+
+# target to build an object file
+src/Managers/CollisionManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/CollisionManager.cpp.o
+.PHONY : src/Managers/CollisionManager.cpp.o
+
+src/Managers/CollisionManager.i: src/Managers/CollisionManager.cpp.i
+.PHONY : src/Managers/CollisionManager.i
+
+# target to preprocess a source file
+src/Managers/CollisionManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/CollisionManager.cpp.i
+.PHONY : src/Managers/CollisionManager.cpp.i
+
+src/Managers/CollisionManager.s: src/Managers/CollisionManager.cpp.s
+.PHONY : src/Managers/CollisionManager.s
+
+# target to generate assembly for a file
+src/Managers/CollisionManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/CollisionManager.cpp.s
+.PHONY : src/Managers/CollisionManager.cpp.s
+
 src/Managers/InputManager.o: src/Managers/InputManager.cpp.o
 .PHONY : src/Managers/InputManager.o
 
@@ -512,6 +536,54 @@ src/Managers/InputManager.s: src/Managers/InputManager.cpp.s
 src/Managers/InputManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/InputManager.cpp.s
 .PHONY : src/Managers/InputManager.cpp.s
+
+src/Managers/KeyboardManager.o: src/Managers/KeyboardManager.cpp.o
+.PHONY : src/Managers/KeyboardManager.o
+
+# target to build an object file
+src/Managers/KeyboardManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/KeyboardManager.cpp.o
+.PHONY : src/Managers/KeyboardManager.cpp.o
+
+src/Managers/KeyboardManager.i: src/Managers/KeyboardManager.cpp.i
+.PHONY : src/Managers/KeyboardManager.i
+
+# target to preprocess a source file
+src/Managers/KeyboardManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/KeyboardManager.cpp.i
+.PHONY : src/Managers/KeyboardManager.cpp.i
+
+src/Managers/KeyboardManager.s: src/Managers/KeyboardManager.cpp.s
+.PHONY : src/Managers/KeyboardManager.s
+
+# target to generate assembly for a file
+src/Managers/KeyboardManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/KeyboardManager.cpp.s
+.PHONY : src/Managers/KeyboardManager.cpp.s
+
+src/Managers/RacquetManager.o: src/Managers/RacquetManager.cpp.o
+.PHONY : src/Managers/RacquetManager.o
+
+# target to build an object file
+src/Managers/RacquetManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/RacquetManager.cpp.o
+.PHONY : src/Managers/RacquetManager.cpp.o
+
+src/Managers/RacquetManager.i: src/Managers/RacquetManager.cpp.i
+.PHONY : src/Managers/RacquetManager.i
+
+# target to preprocess a source file
+src/Managers/RacquetManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/RacquetManager.cpp.i
+.PHONY : src/Managers/RacquetManager.cpp.i
+
+src/Managers/RacquetManager.s: src/Managers/RacquetManager.cpp.s
+.PHONY : src/Managers/RacquetManager.s
+
+# target to generate assembly for a file
+src/Managers/RacquetManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/RacquetManager.cpp.s
+.PHONY : src/Managers/RacquetManager.cpp.s
 
 src/Managers/ScoreManager.o: src/Managers/ScoreManager.cpp.o
 .PHONY : src/Managers/ScoreManager.o
@@ -584,30 +656,6 @@ src/Managers/UIManager.s: src/Managers/UIManager.cpp.s
 src/Managers/UIManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.s
 .PHONY : src/Managers/UIManager.cpp.s
-
-src/Physics/Collision.o: src/Physics/Collision.cpp.o
-.PHONY : src/Physics/Collision.o
-
-# target to build an object file
-src/Physics/Collision.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Physics/Collision.cpp.o
-.PHONY : src/Physics/Collision.cpp.o
-
-src/Physics/Collision.i: src/Physics/Collision.cpp.i
-.PHONY : src/Physics/Collision.i
-
-# target to preprocess a source file
-src/Physics/Collision.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Physics/Collision.cpp.i
-.PHONY : src/Physics/Collision.cpp.i
-
-src/Physics/Collision.s: src/Physics/Collision.cpp.s
-.PHONY : src/Physics/Collision.s
-
-# target to generate assembly for a file
-src/Physics/Collision.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/src/Physics/Collision.cpp.s
-.PHONY : src/Physics/Collision.cpp.s
 
 src/Physics/Physics.o: src/Physics/Physics.cpp.o
 .PHONY : src/Physics/Physics.o
@@ -831,9 +879,18 @@ help:
 	@echo "... src/Managers/BallManager.o"
 	@echo "... src/Managers/BallManager.i"
 	@echo "... src/Managers/BallManager.s"
+	@echo "... src/Managers/CollisionManager.o"
+	@echo "... src/Managers/CollisionManager.i"
+	@echo "... src/Managers/CollisionManager.s"
 	@echo "... src/Managers/InputManager.o"
 	@echo "... src/Managers/InputManager.i"
 	@echo "... src/Managers/InputManager.s"
+	@echo "... src/Managers/KeyboardManager.o"
+	@echo "... src/Managers/KeyboardManager.i"
+	@echo "... src/Managers/KeyboardManager.s"
+	@echo "... src/Managers/RacquetManager.o"
+	@echo "... src/Managers/RacquetManager.i"
+	@echo "... src/Managers/RacquetManager.s"
 	@echo "... src/Managers/ScoreManager.o"
 	@echo "... src/Managers/ScoreManager.i"
 	@echo "... src/Managers/ScoreManager.s"
@@ -843,9 +900,6 @@ help:
 	@echo "... src/Managers/UIManager.o"
 	@echo "... src/Managers/UIManager.i"
 	@echo "... src/Managers/UIManager.s"
-	@echo "... src/Physics/Collision.o"
-	@echo "... src/Physics/Collision.i"
-	@echo "... src/Physics/Collision.s"
 	@echo "... src/Physics/Physics.o"
 	@echo "... src/Physics/Physics.i"
 	@echo "... src/Physics/Physics.s"

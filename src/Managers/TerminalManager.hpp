@@ -18,7 +18,7 @@ namespace pong {
       int cols;
     };
 
-    TerminalSize getTerminalSize(); 
+    TerminalSize getTerminalSize();
     bool hasTerminalResized();
 
   private:
@@ -28,4 +28,4 @@ namespace pong {
   };
 }
 
-#endif
+#endif // !TERMINALMANAGER_HPP

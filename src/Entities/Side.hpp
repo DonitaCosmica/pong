@@ -17,7 +17,7 @@ namespace pong {
     Side &operator=(Side &&) = default;
     Side &operator=(const Side &) = default;
     ~Side() = default;
- 
+
     enum class Position {
       LEFT,
       RIGHT

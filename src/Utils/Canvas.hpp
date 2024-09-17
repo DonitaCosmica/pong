@@ -21,17 +21,18 @@ namespace pong {
       GAME
     };
 
-  struct Area {
-    int x;
-    int y;
-    int width;
-    int height;
-  };
+    struct Area {
+      int x;
+      int y;
+      int width;
+      int height;
+    };
 
-  Canvas(int, int);
+    Canvas(int, int);
 
-  void defineArea(const std::string&, int, int, int, int);
-  const Area& getArea(const std::string&) const;
+    void defineArea(const std::string&, int, int, int, int);
+    void updateSize(int, int);
+    const Area& getArea(const std::string&) const;
 
   private:
     int totalWidth;

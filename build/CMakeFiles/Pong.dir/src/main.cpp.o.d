@@ -183,6 +183,9 @@ CMakeFiles/Pong.dir/src/main.cpp.o: \
  /home/donitacosmica/Tarea/Pong/src/./Game/../Entities/Player.hpp \
  /home/donitacosmica/Tarea/Pong/src/./Game/../Enums/GameState.hpp \
  /home/donitacosmica/Tarea/Pong/src/./Game/../Managers/InputManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/./Game/../Managers/KeyboardManager.hpp \
+ /usr/include/curses.h /usr/include/ncurses_dll.h /usr/include/unctrl.h \
+ /usr/include/curses.h \
  /home/donitacosmica/Tarea/Pong/src/./Game/../Managers/UIManager.hpp \
  /home/donitacosmica/Tarea/Pong/src/./Game/../Managers/../Enums/GameState.hpp \
  /home/donitacosmica/Tarea/Pong/src/./Game/../Managers/TerminalManager.hpp \
