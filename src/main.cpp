@@ -46,7 +46,6 @@ std::unique_ptr<pong::GameMode> configureGameMode(pong::GameMode::Mode selectedM
 {
   pong::GameModeBuilder builder;
   builder.setBoard(terminalManager->getTerminalSize())
-    .setScore()
     .addPlayer1(uiManager)
     .addPlayer2(uiManager)
     .addBall();

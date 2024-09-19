@@ -1,6 +1,8 @@
 #ifndef SCOREMANAGER_HPP
 #define SCOREMANAGER_HPP
 
+#include "../Entities/Score.hpp"
+
 namespace pong {
   class ScoreManager {
   public:
@@ -11,8 +13,7 @@ namespace pong {
     ScoreManager &operator=(const ScoreManager &) = default;
     ~ScoreManager() = default;
 
-  private:
-    
+    static void update(Side::Position);
   };
 }
 

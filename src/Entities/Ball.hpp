@@ -16,15 +16,14 @@ namespace pong {
 
     Ball(float, float);
 
-    void updatePosition();
-    void setDirection(float);
-    float getAngle() const;
-    const Point getPoint() const;
+    Vector getPosition() const;
+    void setPosition(float, float);
     Vector getDirection() const;
-    void setPosition(int, int);
+    void setDirection(float);
     void resetPosition();
-    void increaseSpeed();
     void resetSpeed();
+    float getSpeed() const;
+    void increaseSpeed();
 
   private:
     Vector position;

@@ -4,7 +4,6 @@
 #include "../Entities/Ball.hpp"
 #include "../Entities/Racquet.hpp"
 #include "../Entities/Board.hpp"
-#include "../Entities/Score.hpp"
 
 namespace pong {
   class BallManager {
@@ -16,11 +15,7 @@ namespace pong {
     BallManager &operator=(const BallManager &) = default;
     ~BallManager() = default;
 
-    static void update(Ball&, const Board&, const Racquet&, const Racquet&, Score&);
-
-  private:
-    static void checkCollisions(Ball&, const Board&, const Racquet&, const Racquet&, Score&);
-    static bool isCollidingWithRacquet(const Ball&, const Racquet&);
+    static void update(Ball&, const Board&, const Racquet&, const Racquet&);
   };
 }
 

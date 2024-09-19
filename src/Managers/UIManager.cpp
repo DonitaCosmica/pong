@@ -11,7 +11,6 @@
 #define BLUE "\033[38;2;0;0;255m"
 #define YELLOW "\033[38;2;255;255;0m"
 #define GREEN "\033[38;2;0;255;0m"
-#define WHITE "\033[38;2;255;255;255m"
 #define RESET "\033[0m"
 
 namespace pong {
@@ -172,9 +171,9 @@ namespace pong {
     showMessages(winnerBoardTop, gameArea, MsgType::WINNER);
     std::transform(winner.begin(), winner.end(), winner.begin(), ::toupper);
 
-    std::cout << "\033[" << (centerY + 2)<< ";" << (centerX + 2) << "H";
+    std::cout << "\033[" << (centerY + 2)<< ";" << (centerX + 1) << "H";
     std::cout << BACKGROUND << YELLOW << winner << RESET;
-    std::cout << "\033[" << (centerY + 3) << ";" << (centerX - (winnerBoardBottom.size() / 2) + 1) << "H";
+    std::cout << "\033[" << (centerY + 3) << ";" << (centerX - (winnerBoardBottom.size() / 2) + 3) << "H";
     std::cout << BACKGROUND << YELLOW << winnerBoardBottom << RESET;
     usleep(5000000);
   }
@@ -198,8 +197,8 @@ namespace pong {
 
   void UIManager::drawBall(const Ball& ball) const
   {
-    int x = ball.getPoint().x;
-    int y = ball.getPoint().y;
+    int x = ball.getPosition().x;
+    int y = ball.getPosition().y;
 
     std::cout << "\033[" << y << ";" << x << "H";
     std::cout << BACKGROUND << "●" << RESET << std::endl;

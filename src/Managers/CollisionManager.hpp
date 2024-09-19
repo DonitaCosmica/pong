@@ -2,6 +2,8 @@
 #define COLLISIONMANAGER_HPP
 
 #include "../Entities/Board.hpp"
+#include "../Entities/Ball.hpp"
+#include "../Entities/Racquet.hpp"
 #include "../Physics/Vector.hpp"
 
 namespace pong {
@@ -14,10 +16,8 @@ namespace pong {
     CollisionManager &operator=(const CollisionManager &) = default;
     ~CollisionManager() = default;
 
-    bool checkCollision() const;
-
-  private:
-    
+    static void checkCollisions(Ball&, const Board&, const Racquet&, const Racquet&);
+    static bool isCollidingWithRacquet(const Ball&, const Racquet&);
   };
 }
 

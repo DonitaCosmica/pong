@@ -18,8 +18,8 @@ namespace pong {
     GameMode &operator=(const GameMode &) = default;
     virtual ~GameMode() = default;
 
-    GameMode(std::unique_ptr<Board>, std::unique_ptr<Score>,
-      std::shared_ptr<Player>, std::shared_ptr<Player>, std::unique_ptr<Ball>);
+    GameMode(std::unique_ptr<Board>, std::shared_ptr<Player>,
+      std::shared_ptr<Player>, std::unique_ptr<Ball>);
 
     enum class Mode {
       ONE_ONE,
@@ -31,13 +31,11 @@ namespace pong {
     const Player& getPlayer1() const;
     const Player& getPlayer2() const;
     const Ball& getBall() const;
-    const Score& getScore() const;
     virtual std::pair<std::string, std::string> getPlayerNames() const = 0;
 
   protected:
     Mode mode;
     std::unique_ptr<Board> board;
-    std::unique_ptr<Score> score;
     std::shared_ptr<Player> player1;
     std::shared_ptr<Player> player2;
     std::unique_ptr<Ball> ball;

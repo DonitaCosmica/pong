@@ -7,19 +7,23 @@
 namespace pong {
   class Score {
   public:
-    Score();
     Score(Score &&) = default;
-    Score(const Score &) = default;
+    Score(const Score &) = delete;
     Score &operator=(Score &&) = default;
-    Score &operator=(const Score &) = default;
-    ~Score() = default;
+    Score &operator=(const Score &) = delete;
 
+    static Score& getInstance();
     int getTeam1Score() const;
     int getTeam2Score() const;
-    void update(Side::Position);
     std::pair<int, int> getScores() const;
+    void incrementTeam1();
+    void incrementTeam2();
+    void reset();
 
   private:
+    Score();
+    ~Score() = default;
+
     int team1Score;
     int team2Score;
   };

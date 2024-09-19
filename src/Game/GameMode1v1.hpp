@@ -13,11 +13,9 @@ namespace pong {
     GameMode1v1 &operator=(const GameMode1v1 &) = default;
     ~GameMode1v1() = default;
 
-    GameMode1v1(std::unique_ptr<Board>, std::unique_ptr<Score>,
-      std::shared_ptr<Player>, std::shared_ptr<Player>, std::unique_ptr<Ball>);
+    GameMode1v1(std::unique_ptr<Board>, std::shared_ptr<Player>,
+      std::shared_ptr<Player>, std::unique_ptr<Ball>);
     std::pair<std::string, std::string> getPlayerNames() const override;
-
-  private:
   };
 }
 

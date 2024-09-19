@@ -5,11 +5,11 @@ namespace pong {
   Ball::Ball(float x, float y)
     : position(x, y), direction(1, 0), speed(1.0f), origin(x, y) {}
 
-  void Ball::updatePosition()
-  {
-    position.x += direction.x * speed;
-    position.y += direction.y * speed;
-  }
+  Vector Ball::getPosition() const { return position; }
+
+  void Ball::setPosition(float x, float y) { position = Vector(x, y); }
+
+  Vector Ball::getDirection() const { return direction; }
 
   void Ball::setDirection(float angle)
   {
@@ -18,29 +18,11 @@ namespace pong {
     direction.y = std::sin(radians);
   }
 
-  float Ball::getAngle() const
-  {
-    return std::atan2(direction.y, direction.x) * 180.0f / M_PI;
-  }
+  void Ball::resetPosition() { setPosition(origin.x, origin.y); }
 
-  const Point Ball::getPoint() const
-  {
-    return Point(position.x, position.y);
-  }
-
-  Vector Ball::getDirection() const { return direction; }
-
-  void Ball::setPosition(int x, int y)
-  {
-    position = Vector(x, y);
-  }
-
-  void Ball::resetPosition()
-  {
-    setPosition(origin.x, origin.y);
-  }
+  void Ball::resetSpeed() { speed = 1.0f; }
 
   void Ball::increaseSpeed() { speed += 0.1f; }
 
-  void Ball::resetSpeed() { speed = 1.0f; }
+  float Ball::getSpeed() const { return speed; }
 }

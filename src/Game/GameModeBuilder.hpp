@@ -22,7 +22,6 @@ namespace pong {
     ~GameModeBuilder() = default;
 
     GameModeBuilder& setBoard(TerminalManager::TerminalSize);
-    GameModeBuilder& setScore();
     GameModeBuilder& addPlayer1(UIManager*);
     GameModeBuilder& addPlayer2(UIManager*);
     GameModeBuilder& addPlayer3(UIManager*);
@@ -32,7 +31,6 @@ namespace pong {
 
   private:
     std::unique_ptr<Board> board;
-    std::unique_ptr<Score> score;
     std::shared_ptr<Player> player1, player2, player3;
     std::unique_ptr<Ball> ball;
 

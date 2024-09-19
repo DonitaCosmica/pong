@@ -4,6 +4,7 @@
 #include <chrono>
 #include "../Managers/RacquetManager.hpp"
 #include "../Managers/BallManager.hpp"
+#include "../Entities/Score.hpp"
 
 namespace pong {
   Game::Game(UIManager *uiManager, InputManager *inputManager, GameMode *gameMode)
@@ -11,6 +12,7 @@ namespace pong {
 
   void Game::run()
   {
+    state = GameState::PLAYING;
     inputManager->start();
     uiManager->clearScreen();
 
@@ -23,7 +25,7 @@ namespace pong {
     auto player2Racquet = gameMode->getPlayer2().getRacquet();
     auto player2Side = gameMode->getPlayer2().getSide(); 
     auto ball = gameMode->getBall();
-    auto score = gameMode->getScore();
+    auto& score = Score::getInstance();
 
     uiManager->drawScore(player1, player2);
 
@@ -52,7 +54,7 @@ namespace pong {
         if(inputManager->isKeyPressed(KEY_DOWN))
           RacquetManager::moveDown(*player2Racquet, gameMode->getBoard());
 
-        BallManager::update(ball, gameMode->getBoard(), *player1Racquet, *player2Racquet, score);
+        BallManager::update(ball, gameMode->getBoard(), *player1Racquet, *player2Racquet);
         uiManager->render(state);
 
         if(scoreTeam1 == winnerScore)
@@ -86,5 +88,6 @@ namespace pong {
     endwin();
     uiManager->clearScreen();
     uiManager->drawBorder("init");
+    score.reset();
   }
 }

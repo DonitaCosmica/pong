@@ -6,11 +6,11 @@
 namespace pong {
   class Board : public Entity {
   public:
-    Board() = default;
+    Board() = delete;
     Board(Board &&) = default;
-    Board(const Board &) = default;
+    Board(const Board &) = delete;
     Board &operator=(Board &&) = default;
-    Board &operator=(const Board &) = default;
+    Board &operator=(const Board &) = delete;
     ~Board() = default;
 
     Board(std::vector<Point>&, int, int);
