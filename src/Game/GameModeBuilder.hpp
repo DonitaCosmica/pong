@@ -36,6 +36,7 @@ namespace pong {
     std::shared_ptr<Player> player1, player2, player3;
     std::unique_ptr<Ball> ball;
 
+    void setRawMode(bool enable);
     std::string getPlayerName();
   };
 }

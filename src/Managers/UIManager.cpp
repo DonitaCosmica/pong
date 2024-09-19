@@ -9,10 +9,9 @@
 #define BACKGROUND "\033[48;2;0;0;0m"
 #define RED "\033[38;2;255;0;0m"
 #define BLUE "\033[38;2;0;0;255m"
-#define BLACK "\033[30m"
-#define GREEN "\033[92m"
-#define YELLOW "\033[93m"
-#define CYAN "\033[96m"
+#define YELLOW "\033[38;2;255;255;0m"
+#define GREEN "\033[38;2;0;255;0m"
+#define WHITE "\033[38;2;255;255;255m"
 #define RESET "\033[0m"
 
 namespace pong {
@@ -58,7 +57,7 @@ namespace pong {
 
   void UIManager::drawBackground(const Canvas::Area &area) const
   {
-    for(int i = 0; i < area.height; i++)
+    for(int i = 1; i < area.height - 1; i++)
     {
       std::cout << "\033[" << (area.y + i) << ";" << area.x << "H";
       std::cout << BACKGROUND << std::string(area.width, ' ') << RESET;
@@ -97,7 +96,7 @@ namespace pong {
       "******************************\n"
       "Enter your choice: ";
 
-    showMessages(menu, canvas.getArea("menu"));
+    showMessages(menu, canvas.getArea("menu"), MsgType::NORMAL);
   }
 
   void UIManager::drawScore(std::string &player1Name, std::string &player2Name) const
@@ -113,7 +112,7 @@ namespace pong {
       "*             **             *\n"
       "******************************\n"; 
 
-    showMessages(score, canvas.getArea("score"));
+    showMessages(score, scoreArea, MsgType::NORMAL);
 
     std::transform(player1Name.begin(), player1Name.end(), player1Name.begin(), ::toupper);
     std::transform(player2Name.begin(), player2Name.end(), player2Name.begin(), ::toupper);
@@ -150,11 +149,34 @@ namespace pong {
       "*                            *\n"
       "******************************\n";
 
-    showMessages(inputAddPlayer, menuArea);
+    showMessages(inputAddPlayer, menuArea, MsgType::NORMAL);
 
     int inputRow = (menuArea.height / 2) - (countLines(inputAddPlayer) / 2) + COLPLAYER;
     int inputCol = menuArea.width / 2 - 1;
     std::cout << "\033[" << inputRow << ";" << inputCol << "H";
+  }
+
+  void UIManager::drawWinner(std::string &winner) const
+  {
+    const Canvas::Area &gameArea = canvas.getArea("game");
+    const std::string winnerBoardTop =
+      "******************************\n"
+      "*           WINNER           *\n"
+      "******************************\n"
+      "*                            *\n";
+
+    const std::string winnerBoardBottom =
+      "******************************\n";
+
+    auto [centerX, centerY] = centerPos(winner, 0.75f, gameArea);
+    showMessages(winnerBoardTop, gameArea, MsgType::WINNER);
+    std::transform(winner.begin(), winner.end(), winner.begin(), ::toupper);
+
+    std::cout << "\033[" << (centerY + 2)<< ";" << (centerX + 2) << "H";
+    std::cout << BACKGROUND << YELLOW << winner << RESET;
+    std::cout << "\033[" << (centerY + 3) << ";" << (centerX - (winnerBoardBottom.size() / 2) + 1) << "H";
+    std::cout << BACKGROUND << YELLOW << winnerBoardBottom << RESET;
+    usleep(5000000);
   }
 
   void UIManager::drawRacquet(const Racquet &racquet, const Side &side) const
@@ -195,17 +217,16 @@ namespace pong {
         std::cout << YELLOW << message << RESET << std::endl;
         break;
       case MsgType::NORMAL:
-        std::cout << GREEN << message << RESET << std::endl;
+        std::cout << message << std::endl;
         break;
       case MsgType::ERROR:
         std::cout << RED << message << RESET << std::endl;
-        break;
     }
 
     usleep(2000000);
   }
 
-  void UIManager::showMessages(const std::string &message, const Canvas::Area &area) const
+  void UIManager::showMessages(const std::string &message, const Canvas::Area &area, MsgType type) const
   {
     int centerY = area.height / 2 - (countLines(message) / 2);
     std::istringstream stream(message);
@@ -216,7 +237,19 @@ namespace pong {
     {
       int centerX = area.width / 2 - line.size() / 2;
       std::cout << "\033[" << (area.y + centerY + lineNumber) << ";" << (centerX + area.x) << "H";
-      std::cout << BACKGROUND << line << RESET;
+
+      switch(type)
+      {
+        case MsgType::WINNER:
+          std::cout << BACKGROUND << YELLOW << line << RESET;
+          break;
+        case MsgType::NORMAL:
+          std::cout << BACKGROUND << line << RESET;
+          break;
+        case MsgType::ERROR:
+          std::cout << BACKGROUND << RED << line<< RESET;
+      }
+ 
       lineNumber++;
     }
   }

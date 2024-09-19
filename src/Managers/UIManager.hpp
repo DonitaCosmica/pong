@@ -38,7 +38,7 @@ namespace pong {
     void drawPoints(const Side&, int, std::string&);
     void drawBorder(const std::string&) const;
     void drawInputAddPlayer(const std::string&) const;
-
+    void drawWinner(std::string&) const;
     void render(GameState);
     void showMessage(const std::string&, MsgType) const;
 
@@ -53,7 +53,7 @@ namespace pong {
       { MsgType::ERROR, 0.7f }
     };
 
-    void showMessages(const std::string&, const Canvas::Area&) const;
+    void showMessages(const std::string&, const Canvas::Area&, MsgType) const;
     int countLines(const std::string&) const;
     std::string extractIntegerWords(const std::string&) const;
     std::pair<int, int> centerPos(const std::string&, float, const Canvas::Area&) const;

@@ -8,11 +8,6 @@ namespace pong {
 
   GameMode::Mode GameMode::getMode() const { return mode; }
 
-  std::pair<int, int> GameMode::getScores() const
-  {
-    return std::make_pair(score->getTeam1Score(), score->getTeam2Score());
-  }
-
   const Board& GameMode::getBoard() const { return *board; }
 
   const Player& GameMode::getPlayer1() const { return *player1; }
@@ -20,4 +15,6 @@ namespace pong {
   const Player& GameMode::getPlayer2() const { return *player2; }
 
   const Ball& GameMode::getBall() const { return *ball; }
+
+  const Score& GameMode::getScore() const { return *score; }
 }

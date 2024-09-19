@@ -179,5 +179,5 @@ CMakeFiles/Pong.dir/src/Game/GameMode.cpp.o: \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Vector.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Board.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp

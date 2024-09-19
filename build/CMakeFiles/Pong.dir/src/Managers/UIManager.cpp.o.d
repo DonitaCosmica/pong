@@ -175,6 +175,7 @@ CMakeFiles/Pong.dir/src/Managers/UIManager.cpp.o: \
  /home/donitacosmica/Tarea/Pong/src/Managers/../Entities/Ball.hpp \
  /home/donitacosmica/Tarea/Pong/src/Managers/../Entities/../Physics/Vector.hpp \
  /home/donitacosmica/Tarea/Pong/src/Managers/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Managers/../Entities/Board.hpp \
  /home/donitacosmica/Tarea/Pong/src/Managers/../Entities/Side.hpp \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \

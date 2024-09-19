@@ -176,6 +176,7 @@ CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o: \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Ball.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/../Physics/Vector.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Board.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Side.hpp \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
@@ -193,15 +194,31 @@ CMakeFiles/Pong.dir/src/Game/GameModeBuilder.cpp.o: \
  /usr/include/c++/11/pstl/execution_defs.h \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Racquet.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Board.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Entity.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Side.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Racquet.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Racquet.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/TerminalManager.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/GameMode1v1.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/GameMode.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/GameMode2v1.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Physics/Point.hpp
+ /home/donitacosmica/Tarea/Pong/src/Game/../Physics/Point.hpp \
+ /usr/include/termios.h /usr/include/x86_64-linux-gnu/bits/termios.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h

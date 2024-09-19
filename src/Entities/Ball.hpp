@@ -2,6 +2,7 @@
 #define BALL_HPP
 
 #include "../Physics/Vector.hpp"
+#include "Board.hpp"
 
 namespace pong {
   class Ball {
@@ -13,17 +14,23 @@ namespace pong {
     Ball &operator=(const Ball &) = default;
     ~Ball() = default;
 
-    Ball(int, int);
+    Ball(float, float);
 
+    void updatePosition();
+    void setDirection(float);
+    float getAngle() const;
     const Point getPoint() const;
-    float getRadius() const;
-    void setSpeed(int);
-    void bounce(bool);
+    Vector getDirection() const;
+    void setPosition(int, int);
+    void resetPosition();
+    void increaseSpeed();
+    void resetSpeed();
 
   private:
     Vector position;
-    int speed = 2;
-    int radius = 2;
+    Vector direction;
+    Point origin;
+    float speed;
   };
 }
 

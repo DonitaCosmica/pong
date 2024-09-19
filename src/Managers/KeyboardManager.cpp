@@ -13,6 +13,4 @@ namespace pong {
   }
 
   int KeyboardManager::getKey() const { return getch(); }
-
-  KeyboardManager::~KeyboardManager() { endwin(); }
 }

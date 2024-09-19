@@ -11,7 +11,7 @@ namespace pong {
     KeyboardManager(const KeyboardManager &) = default;
     KeyboardManager &operator=(KeyboardManager &&) = default;
     KeyboardManager &operator=(const KeyboardManager &) = default;
-    ~KeyboardManager();
+    ~KeyboardManager() = default;
 
     void start();
     int getKey() const;

@@ -1,9 +1,26 @@
 #include "GameModeBuilder.hpp"
 #include "../Physics/Point.hpp"
+#include <termios.h>
+#include <unistd.h>
 
+#define BACKGROUND "\033[48;2;0;0;0m"
+#define RESET "\033[0m"
 #define getFuncName(val) #val
 
 namespace pong {
+  void GameModeBuilder::setRawMode(bool enable)
+  {
+    struct termios t;
+    tcgetattr(STDIN_FILENO, &t);
+
+    if(enable)
+      t.c_lflag &= ~(ICANON | ECHO);
+    else
+      t.c_lflag |= (ICANON | ECHO);
+
+    tcsetattr(STDIN_FILENO, TCSANOW, &t);
+  }
+
   std::string GameModeBuilder::getPlayerName()
   {
     std::string playerName;
@@ -40,7 +57,7 @@ namespace pong {
     uiManager->drawInputAddPlayer(getFuncName(addPlayer1));
     std::string playerName = getPlayerName();
 
-    int racquetHeight = board->getHeight() / 2;
+    int racquetHeight = board->getHeight() / 4;
     int racquetWidth = 2;
 
     Point origin = board->getOrigin();
@@ -60,7 +77,7 @@ namespace pong {
     uiManager->drawInputAddPlayer(getFuncName(addPlayer2));
     std::string playerName = getPlayerName();
 
-    int racquetHeight = board->getHeight() / 2;
+    int racquetHeight = board->getHeight() / 4;
     int racquetWidth = 2;
 
     Point origin = board->getOrigin();

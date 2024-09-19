@@ -31,7 +31,6 @@ int main (int argc, char *argv[])
       uiManager->render(pong::GameState::MENU);
       std::unique_ptr<pong::GameMode> gameMode = configureGameMode(selectedMode, uiManager.get(), terminalManager.get());
       runGameLoop(uiManager.get(), inputManager.get(), gameMode);
-      gameRunning = false;
     }
     catch (const std::exception &e)
     {

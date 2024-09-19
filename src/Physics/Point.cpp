@@ -5,7 +5,7 @@
 namespace pong {
   Point::Point() : x(0), y(0) {}
 
-  Point::Point(int x, int y) : x(x), y(y) {}
+  Point::Point(float x, float y) : x(x), y(y) {}
 
   Point::Point(const Point &other)
   {
@@ -47,12 +47,13 @@ namespace pong {
     return *this;
   }
 
-  int Point::distanceTo(const Point &other) const
+  float Point::distanceTo(const Point &other) const
   {
     return std::sqrt((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y));
   }
 
-  std::string Point::to_string() const {
+  std::string Point::to_string() const
+  {
     std::ostringstream oss;
     oss << "(" << x << ", " << y << ")";
     return oss.str();

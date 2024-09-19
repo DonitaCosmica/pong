@@ -4,7 +4,9 @@
 namespace pong {
   Vector::Vector() : Point() {}
 
-  Vector::Vector(int x, int y) : Point(x, y) {}
+  Vector::Vector(float x, float y) : Point(x, y) {}
+
+  Vector::Vector(const Vector &other) : Point(other.x, other.y) {}
 
   Vector& Vector::operator=(const Vector &other)
   {
@@ -40,20 +42,20 @@ namespace pong {
     return *this;
   }
 
-  Vector Vector::scale(int scalar) const
+  Vector Vector::scale(float scalar) const
   {
     return Vector(x * scalar, y * scalar);
   }
 
   Vector Vector::reflect(const Vector &normal) const
   {
-    int dotProduct = x * normal.x + y * normal.y;
+    float dotProduct = x * normal.x + y * normal.y;
     return Vector(x - 2 * dotProduct * normal.x, y - 2 * dotProduct * normal.y);
   }
 
   Vector& Vector::normalize()
   {
-    int magnitude = getMagnitude();
+    float magnitude = getMagnitude();
     if(magnitude != 0)
     {
       x /= magnitude;
@@ -63,16 +65,16 @@ namespace pong {
     return *this;
   }
 
-  int Vector::getMagnitude() const
+  float Vector::getMagnitude() const
   {
     return std::sqrt(x * x + y * y);
   }
 
-  int Vector::angleBetween(const Vector &other) const
+  float Vector::angleBetween(const Vector &other) const
   {
-    int dotProduct = x * other.x + y * other.y;
-    int magnitudeA = std::sqrt(x * x + y * y);
-    int magnitudeB = std::sqrt(other.x * other.x + other.y * other.y);
+    float dotProduct = x * other.x + y * other.y;
+    float magnitudeA = std::sqrt(x * x + y * y);
+    float magnitudeB = std::sqrt(other.x * other.x + other.y * other.y);
     return std::acos(dotProduct / (magnitudeA * magnitudeB));
   }
 }

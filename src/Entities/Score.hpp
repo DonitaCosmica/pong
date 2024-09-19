@@ -1,7 +1,8 @@
 #ifndef SCORE_HPP
 #define SCORE_HPP
 
-#include "Player.hpp"
+#include <utility>
+#include "Side.hpp"
 
 namespace pong {
   class Score {
@@ -15,7 +16,8 @@ namespace pong {
 
     int getTeam1Score() const;
     int getTeam2Score() const;
-    void updateScore(Player&);
+    void update(Side::Position);
+    std::pair<int, int> getScores() const;
 
   private:
     int team1Score;

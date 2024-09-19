@@ -180,8 +180,8 @@ CMakeFiles/Pong.dir/src/Game/Game.cpp.o: \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Ball.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Vector.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/../Physics/Point.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Board.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Score.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Entities/Player.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Enums/GameState.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/InputManager.hpp \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/KeyboardManager.hpp \
@@ -210,4 +210,6 @@ CMakeFiles/Pong.dir/src/Game/Game.cpp.o: \
  /usr/include/c++/11/ratio /usr/include/c++/11/limits \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /home/donitacosmica/Tarea/Pong/src/Game/../Managers/RacquetManager.hpp \
- /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Board.hpp
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Board.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/BallManager.hpp \
+ /home/donitacosmica/Tarea/Pong/src/Game/../Managers/../Entities/Score.hpp
