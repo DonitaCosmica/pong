@@ -2,6 +2,7 @@
 #include <ncurses.h>
 #include <unistd.h>
 #include <chrono>
+#include <limits>
 #include "../Managers/RacquetManager.hpp"
 #include "../Managers/BallManager.hpp"
 #include "../Entities/Score.hpp"
@@ -89,5 +90,6 @@ namespace pong {
     uiManager->clearScreen();
     uiManager->drawBorder("init");
     score.reset();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
   }
 }

@@ -11,5 +11,7 @@ file(GLOB_RECURSE SOURCES
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
+add_library(Point SHARED src/Physics/Point.cpp)
+add_library(Vector SHARED src/Physics/Vector.cpp)
 add_executable(Pong ${SOURCES})
-target_link_libraries(Pong ${CURSES_LIBRARIES} pthread)
+target_link_libraries(Pong ${CURSES_LIBRARIES} Point Vector)
